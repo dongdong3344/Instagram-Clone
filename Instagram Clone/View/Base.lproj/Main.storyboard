@@ -15,15 +15,15 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login In View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginInViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-fT-Q1H" customClass="UIViewX" customModule="Instagram_Clone" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-fT-Q1H" customClass="CustomView" customModule="Instagram_Clone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lnstagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-a9-cWm">
@@ -41,10 +41,10 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.97715736040609136" green="0.18164093808884693" blue="0.24883917338690614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -163,6 +163,9 @@
                                         <state key="normal" title="注册。">
                                             <color key="titleColor" red="0.17254901959999999" green="0.4549019608" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="dbp-dQ-LFf" kind="show" id="3Wy-eC-m19"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -212,13 +215,114 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgView" destination="BHa-fT-Q1H" id="wXB-uu-l7u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wsh-f8-YZ5">
+            <objects>
+                <viewController id="dbp-dQ-LFf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pCO-1L-4FH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dg-66-saJ">
+                                <rect key="frame" x="0.0" y="622.5" width="375" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="L8N-Zm-sE6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEH-4m-H8e">
+                                <rect key="frame" x="132" y="635" width="111" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已经有账户？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt8-d9-qh4">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="OB2-8W-JZM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRe-iW-zId">
+                                        <rect key="frame" x="74" y="0.0" width="37" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="O0M-pc-PzQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <state key="normal" title="登录。">
+                                            <color key="titleColor" red="0.17254901959999999" green="0.4549019608" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="SFc-Gn-BAW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="2KZ-of-BZo"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vj-nX-QVm" customClass="CustomView" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lnstagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCW-T5-SIj">
+                                        <rect key="frame" x="115.5" y="70" width="144.5" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="nc6-rm-zYk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册即可查看好友的照片和视频。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-vn-4f8">
+                                        <rect key="frame" x="65" y="145" width="245" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cct-vn-4f8" firstAttribute="centerX" secondItem="2Vj-nX-QVm" secondAttribute="centerX" id="6Pb-xN-wzJ"/>
+                                    <constraint firstItem="gCW-T5-SIj" firstAttribute="centerX" secondItem="2Vj-nX-QVm" secondAttribute="centerX" id="H2A-h0-rW2"/>
+                                    <constraint firstItem="cct-vn-4f8" firstAttribute="top" secondItem="gCW-T5-SIj" secondAttribute="bottom" constant="15" id="NAc-hA-HNS"/>
+                                    <constraint firstAttribute="height" constant="200" id="Rel-4k-33Y"/>
+                                    <constraint firstItem="gCW-T5-SIj" firstAttribute="centerY" secondItem="2Vj-nX-QVm" secondAttribute="centerY" id="jvo-aC-aRN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Vj-nX-QVm" firstAttribute="trailing" secondItem="IcZ-v1-Mhg" secondAttribute="trailing" id="2qe-1I-vDd"/>
+                            <constraint firstItem="IcZ-v1-Mhg" firstAttribute="bottom" secondItem="9Dg-66-saJ" secondAttribute="bottom" constant="44" id="9WR-7H-y9o"/>
+                            <constraint firstItem="LEH-4m-H8e" firstAttribute="centerX" secondItem="pCO-1L-4FH" secondAttribute="centerX" id="GeI-zq-BsV"/>
+                            <constraint firstItem="9Dg-66-saJ" firstAttribute="leading" secondItem="pCO-1L-4FH" secondAttribute="leading" id="JsL-WG-oOh"/>
+                            <constraint firstItem="LEH-4m-H8e" firstAttribute="top" secondItem="9Dg-66-saJ" secondAttribute="bottom" constant="12" id="Pja-T5-hOj"/>
+                            <constraint firstAttribute="trailing" secondItem="9Dg-66-saJ" secondAttribute="trailing" id="f8I-1R-ZY7"/>
+                            <constraint firstItem="2Vj-nX-QVm" firstAttribute="top" secondItem="pCO-1L-4FH" secondAttribute="top" id="wSl-sB-ZIf"/>
+                            <constraint firstItem="2Vj-nX-QVm" firstAttribute="leading" secondItem="IcZ-v1-Mhg" secondAttribute="leading" id="zRj-Hj-EuO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IcZ-v1-Mhg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ab-PC-Teg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="117"/>
         </scene>
     </scenes>
     <resources>
