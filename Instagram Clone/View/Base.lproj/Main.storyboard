@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lnstagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-a9-cWm">
-                                        <rect key="frame" x="116" y="45" width="144.5" height="55.5"/>
+                                        <rect key="frame" x="77.5" y="43.5" width="221.5" height="58.5"/>
                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -164,7 +164,7 @@
                                             <color key="titleColor" red="0.17254901959999999" green="0.4549019608" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="dbp-dQ-LFf" kind="show" id="3Wy-eC-m19"/>
+                                            <segue destination="dbp-dQ-LFf" kind="custom" identifier="login" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="3Wy-eC-m19"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -260,7 +260,7 @@
                                             <color key="titleColor" red="0.17254901959999999" green="0.4549019608" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="SFc-Gn-BAW"/>
+                                            <segue destination="BYZ-38-t0r" kind="custom" customClass="SegueFromRight" customModule="Instagram_Clone" customModuleProvider="target" id="SFc-Gn-BAW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -319,6 +319,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IcZ-v1-Mhg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8Ld-Ii-GBJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ab-PC-Teg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

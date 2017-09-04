@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
 		6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B081F5C126700FA9525 /* LoginViewController.swift */; };
 		6B956B0C1F5C126700FA9525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0A1F5C126700FA9525 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		6B956B031F5C126700FA9525 /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B956B061F5C126700FA9525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B956B081F5C126700FA9525 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */,
+				6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */,
 				6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */,
 				6BCE87331F5D1BB100AA50E1 /* IBDesignable.swift in Sources */,
+				6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */,
 				6BCE873B1F5D443A00AA50E1 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
