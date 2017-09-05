@@ -10,59 +10,60 @@ import Foundation
 
 typealias JSON = [String:Any]
 
-class MobileCode:NSObject{
-    
-    var name: String!
-    var dial_code: String!
-    var code: String!
-    
-    init(json:JSON) {
-        super.init()
-        
-        setValuesForKeys(json)
-     
-    }
-    
-    override func setValue(_ value: Any?, forKey key: String) {
-        
-        super.setValue(value, forKey: key)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        
-    }
-    
-    
-  static func getMobileCodes(completion:@escaping([MobileCode]) -> Void){
-        
-        var mobileCodes = [MobileCode]()
-       
-        if let filePath = Bundle.main.path(forResource: "MobileCodes", ofType: "json"){
-           
-            if let jsonData = NSData(contentsOfFile: filePath){
-                
-                do{
-                    let json = try JSONSerialization.jsonObject(with: jsonData as Data, options:.mutableContainers) as! JSON
-                    
-                    let dicts = json["countries"] as! [JSON]
-                    
-                      // print(dicts)
-                    
-                       mobileCodes = dicts.map({
-                            return MobileCode.init(json: $0)
+/**Method one*/
+//struct MobileCode {
+//    let name, dialCode, code : String
+//}
+//
+//struct MobileCodeFetcher{
+//
+//    static func getMobileCodes() -> [MobileCode] {
+//        let fileURL = Bundle.main.url(forResource: "MobileCodes", withExtension: "json")
+//        let jsonData = try! Data(contentsOf: fileURL!)
+//        let json = try! JSONSerialization.jsonObject(with: jsonData) as! JSON
+//        let countries = json["countries"] as! [[String:String]]
+//        return countries.map { MobileCode(name: $0["name"]!, dialCode: $0["dial_code"]!, code: $0["code"]!) }
+//    }
+//}
 
+struct MobileCode{
+
+    let name,dialCode,code: String!
+
+   init(dictionary: JSON) {
+        self.name = dictionary["name"] as! String
+        self.dialCode = dictionary["dial_code"] as! String
+        self.code = dictionary["code"] as! String
+
+    }
+}
+
+struct MobileCodeFetcher {
+  static func getMobileCodes() -> [MobileCode] {
+
+        var mobileCodes = [MobileCode]()
+
+        if let filePath = Bundle.main.path(forResource: "MobileCodes", ofType: "json"){
+
+            if  let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath)){
+
+                do{
+                    let json = try JSONSerialization.jsonObject(with: jsonData, options:[]) as! JSON
+
+                    if  let dicts = json["countries"] as? [JSON] {
+
+                        mobileCodes = dicts.map({
+                            return MobileCode.init(dictionary: $0)
                         })
-                  
-                    completion(mobileCodes)
-                    
+                    }
+
                 }catch let error as NSError{
                     print("解析出错: \(error.localizedDescription)")
                 }
-                
             }
-         
-        }
-       
-        
+
+          }
+        return mobileCodes
     }
 }
+

@@ -14,12 +14,9 @@ class CodeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        MobileCode.getMobileCodes { (mobileCodes) in
-            self.mobileCodes = mobileCodes
-            
-          
-        }
+        
+        mobileCodes = MobileCodeFetcher.getMobileCodes()
+   
     }
 
     @IBAction func cancelClick(_ sender: UIBarButtonItem) {

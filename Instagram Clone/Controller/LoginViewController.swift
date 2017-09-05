@@ -9,15 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-   
+   var codes = [MobileCode]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        MobileCode.getMobileCodes { (mobileCodes) in
-            _ = mobileCodes.map({
-                print($0.dial_code)
-            })
-        }
     
     }
     
