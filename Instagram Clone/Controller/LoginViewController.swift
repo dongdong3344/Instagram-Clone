@@ -14,7 +14,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         MobileCode.getMobileCodes { (mobileCodes) in
-            print("数量: \(mobileCodes.count)")
+            _ = mobileCodes.map({
+                print($0.dial_code)
+            })
         }
     
     }

@@ -10,6 +10,18 @@ import UIKit
 
 @IBDesignable
 
+class LeftPaddedTextField: UITextField {
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 100, y: bounds.origin.y, width: bounds.width , height: bounds.height)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 100, y: bounds.origin.y, width: bounds.width , height: bounds.height)
+    }
+    
+}
+
 class CustomView:UIView {
     
     var colorArray :[(colorOne:UIColor,colorTwo:UIColor)] = []
