@@ -9,13 +9,22 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
+    @IBOutlet weak var codeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        if let title = UserDefaults.standard.object(forKey: "CodeButtonTitle") as? String {
+            codeButton.setTitle(title, for: .normal)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -22,9 +22,7 @@ class CodeTableViewController: UITableViewController {
 
     @IBAction func cancelClick(_ sender: UIBarButtonItem) {
         
-         dismiss(animated: true) {
-            
-        }
+         dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
@@ -46,19 +44,25 @@ class CodeTableViewController: UITableViewController {
         
         cell.textLabel?.text = mobileCodes[indexPath.row].name
         
-       
         let dialCodeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 24))
         dialCodeLabel.textAlignment = .right
         dialCodeLabel.textColor = UIColor.lightGray
         dialCodeLabel.font = UIFont.systemFont(ofSize: 15)
         dialCodeLabel.text = mobileCodes[indexPath.row].dialCode
         cell.accessoryView = dialCodeLabel
-
         return cell
     }
    
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let title = mobileCodes[indexPath.row].code + " " + mobileCodes[indexPath.row].dialCode
+        UserDefaults.standard.set(title, forKey: "CodeButtonTitle")
+        UserDefaults.standard.synchronize()
+        
+        dismiss(animated: true, completion: nil)
         
     }
  

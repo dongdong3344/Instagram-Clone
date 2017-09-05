@@ -442,7 +442,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krg-Ja-csG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3521" y="1000"/>
+            <point key="canvasLocation" x="-3538" y="1000"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="EfK-fS-fBt">
@@ -628,6 +628,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Nl-9l-5cN"/>
                     </view>
+                    <connections>
+                        <outlet property="codeButton" destination="Bt0-hk-Ej5" id="Cfq-1G-Y5z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6g-Mm-VgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
