@@ -13,13 +13,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        MobileCode.getMobileCodes { (mobileCodes) in
+            print("数量: \(mobileCodes.count)")
+        }
+    
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
-
-    
+ 
 }
 
