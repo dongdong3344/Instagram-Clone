@@ -14,14 +14,14 @@
 		6B021F071F6007B20076B999 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F061F6007B20076B999 /* Activity.storyboard */; };
 		6B021F091F6007C20076B999 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F081F6007C20076B999 /* Profile.storyboard */; };
 		6B0222A51F5E4EF000AFE80F /* MobileCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0222A41F5E4EF000AFE80F /* MobileCode.swift */; };
-		6B0222A81F5E601F00AFE80F /* MobileCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0222A71F5E601F00AFE80F /* MobileCodes.json */; };
 		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
+		6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */; };
+		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
 		6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B081F5C126700FA9525 /* LoginViewController.swift */; };
 		6B956B0C1F5C126700FA9525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0A1F5C126700FA9525 /* Main.storyboard */; };
 		6B956B0E1F5C126700FA9525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0D1F5C126700FA9525 /* Assets.xcassets */; };
 		6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0F1F5C126700FA9525 /* LaunchScreen.storyboard */; };
-		6B956B1A1F5C2F1200FA9525 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B181F5C2D5E00FA9525 /* Pacifico-Regular.ttf */; };
 		6BCE87331F5D1BB100AA50E1 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */; };
 		6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */; };
 		6BCE873B1F5D443A00AA50E1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE873A1F5D443A00AA50E1 /* SignUpViewController.swift */; };
@@ -42,16 +42,17 @@
 		6B021F061F6007B20076B999 /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		6B021F081F6007C20076B999 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		6B0222A41F5E4EF000AFE80F /* MobileCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCode.swift; sourceTree = "<group>"; };
-		6B0222A71F5E601F00AFE80F /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		6B207C621F600E71003E0F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
+		6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Billabong-Bold.otf"; sourceTree = "<group>"; };
+		6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileCodes.storyboard; sourceTree = "<group>"; };
 		6B956B031F5C126700FA9525 /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B956B061F5C126700FA9525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B956B081F5C126700FA9525 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B956B0B1F5C126700FA9525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B956B0D1F5C126700FA9525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B956B101F5C126700FA9525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B956B121F5C126700FA9525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B956B181F5C2D5E00FA9525 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cookie-Regular.ttf"; sourceTree = "<group>"; };
 		6BCE873A1F5D443A00AA50E1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +101,7 @@
 				6BCE873D1F5D4C5300AA50E1 /* View */,
 				6BCE873C1F5D4C4500AA50E1 /* Controller */,
 				6B956B0D1F5C126700FA9525 /* Assets.xcassets */,
-				6B956B121F5C126700FA9525 /* Info.plist */,
-				6B0222A71F5E601F00AFE80F /* MobileCodes.json */,
+				6B207C621F600E71003E0F47 /* Info.plist */,
 			);
 			path = "Instagram Clone";
 			sourceTree = "<group>";
@@ -132,6 +132,7 @@
 				6B021F041F6007990076B999 /* Push.storyboard */,
 				6B021F021F6007820076B999 /* Search.storyboard */,
 				6B021F001F6007190076B999 /* Home.storyboard */,
+				6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */,
 				6B956B0F1F5C126700FA9525 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -157,9 +158,10 @@
 		6BCE87401F5D4C6700AA50E1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				6B207C631F600E71003E0F47 /* MobileCodes.json */,
 				6B956B061F5C126700FA9525 /* AppDelegate.swift */,
 				6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */,
-				6B956B181F5C2D5E00FA9525 /* Pacifico-Regular.ttf */,
+				6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -223,14 +225,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */,
 				6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */,
-				6B956B1A1F5C2F1200FA9525 /* Pacifico-Regular.ttf in Resources */,
 				6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */,
 				6B021F071F6007B20076B999 /* Activity.storyboard in Resources */,
 				6B956B0E1F5C126700FA9525 /* Assets.xcassets in Resources */,
 				6B021F031F6007820076B999 /* Search.storyboard in Resources */,
 				6B021F091F6007C20076B999 /* Profile.storyboard in Resources */,
-				6B0222A81F5E601F00AFE80F /* MobileCodes.json in Resources */,
+				6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */,
 				6B021EFF1F6006420076B999 /* TabBar.storyboard in Resources */,
 				6B956B0C1F5C126700FA9525 /* Main.storyboard in Resources */,
 				6B021F051F6007990076B999 /* Push.storyboard in Resources */,

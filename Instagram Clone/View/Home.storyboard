@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="2S0-Ys-zZ3"/>
                     </view>
                     <navigationItem key="navigationItem" title="lnstagram" id="mIu-Sv-P30">
-                        <barButtonItem key="leftBarButtonItem" image="tabbar-camera-icon" style="done" id="SCi-CD-TEw">
+                        <barButtonItem key="leftBarButtonItem" image="bar-button-camera" style="done" id="SCi-CD-TEw">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ufi-button-share-plane" style="done" id="oId-HR-2Kd">
@@ -56,7 +56,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabbar-camera-icon" width="24" height="24"/>
+        <image name="bar-button-camera" width="24" height="24"/>
         <image name="tabbar-home-icon" width="24" height="24"/>
         <image name="tabbar-home-icon-highlighted" width="24" height="24"/>
         <image name="ufi-button-share-plane" width="24" height="24"/>

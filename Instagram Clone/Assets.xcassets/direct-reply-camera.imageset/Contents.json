@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "nullstate-camera@2x.png",
+      "filename" : "direct-reply-camera.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "direct-reply-camera@2x.png",
       "scale" : "2x"
     },
     {

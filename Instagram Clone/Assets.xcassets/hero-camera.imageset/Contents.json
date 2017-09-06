@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "instagram.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "hero-camera@2x.png",
       "scale" : "2x"
     },
     {
