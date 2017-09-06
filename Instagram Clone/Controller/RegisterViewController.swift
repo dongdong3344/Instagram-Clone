@@ -10,7 +10,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
  
-    @IBOutlet weak var leftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lineLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bgViewLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var codeButton: UIButton!
     @IBOutlet weak var mailButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
@@ -19,9 +20,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         phoneButton.isSelected = true
-        
+
         lastSelectedButton = phoneButton
        
     }
@@ -34,7 +34,9 @@ class RegisterViewController: UIViewController {
         lastSelectedButton.setTitleColor(UIColor.lightGray, for: .normal)
         lastSelectedButton = sender
         //改变约束
-        leftConstraint.constant = sender.frame.origin.x + 20
+        lineLeftConstraint.constant = sender.frame.origin.x + 20
+        phoneButton.isSelected ? (bgViewLeftConstraint.constant = 0):(bgViewLeftConstraint.constant = -view.frame.size.width)
+        
         //动画效果
         UIView.animate(withDuration: 0.25) {
             self.view.layoutIfNeeded()
@@ -49,7 +51,4 @@ class RegisterViewController: UIViewController {
         }
     }
    
-
-   
-
 }

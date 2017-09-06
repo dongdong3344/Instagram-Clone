@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-       // UIApplication.shared.statusBarStyle = .lightContent
+        let font = UIFont.init(name: "Cookie-Regular", size: 30)!
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font:font]
         
         
         return true
