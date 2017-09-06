@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xsi-mI-Gbh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Push View Controller-->
+        <scene sceneID="2Jr-Cf-3yL">
+            <objects>
+                <viewController id="B91-4m-Mcz" customClass="PushViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YUl-Bz-PSO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Yco-M2-esE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tWX-SC-TKy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNb-lm-VWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="-933"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bIp-Ga-djZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xsi-mI-Gbh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab-bar-plus" selectedImage="tab-bar-plus-selected" id="3RR-xI-wop">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lvy-0c-xbV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B91-4m-Mcz" kind="relationship" relationship="rootViewController" id="M2V-fk-uo2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTQ-yY-Eg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511" y="-1997"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab-bar-plus" width="24" height="24"/>
+        <image name="tab-bar-plus-selected" width="24" height="24"/>
+    </resources>
+</document>

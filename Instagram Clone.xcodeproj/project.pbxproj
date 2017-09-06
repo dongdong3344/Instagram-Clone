@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B021EFF1F6006420076B999 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021EFE1F6006420076B999 /* TabBar.storyboard */; };
+		6B021F011F60071A0076B999 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F001F6007190076B999 /* Home.storyboard */; };
+		6B021F031F6007820076B999 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F021F6007820076B999 /* Search.storyboard */; };
+		6B021F051F6007990076B999 /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F041F6007990076B999 /* Push.storyboard */; };
+		6B021F071F6007B20076B999 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F061F6007B20076B999 /* Activity.storyboard */; };
+		6B021F091F6007C20076B999 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F081F6007C20076B999 /* Profile.storyboard */; };
 		6B0222A51F5E4EF000AFE80F /* MobileCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0222A41F5E4EF000AFE80F /* MobileCode.swift */; };
 		6B0222A81F5E601F00AFE80F /* MobileCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0222A71F5E601F00AFE80F /* MobileCodes.json */; };
 		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
@@ -29,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B021EFE1F6006420076B999 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		6B021F001F6007190076B999 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6B021F021F6007820076B999 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		6B021F041F6007990076B999 /* Push.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Push.storyboard; sourceTree = "<group>"; };
+		6B021F061F6007B20076B999 /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
+		6B021F081F6007C20076B999 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		6B0222A41F5E4EF000AFE80F /* MobileCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCode.swift; sourceTree = "<group>"; };
 		6B0222A71F5E601F00AFE80F /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
@@ -114,6 +126,12 @@
 			isa = PBXGroup;
 			children = (
 				6B956B0A1F5C126700FA9525 /* Main.storyboard */,
+				6B021EFE1F6006420076B999 /* TabBar.storyboard */,
+				6B021F081F6007C20076B999 /* Profile.storyboard */,
+				6B021F061F6007B20076B999 /* Activity.storyboard */,
+				6B021F041F6007990076B999 /* Push.storyboard */,
+				6B021F021F6007820076B999 /* Search.storyboard */,
+				6B021F001F6007190076B999 /* Home.storyboard */,
 				6B956B0F1F5C126700FA9525 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -208,9 +226,15 @@
 				6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */,
 				6B956B1A1F5C2F1200FA9525 /* Pacifico-Regular.ttf in Resources */,
 				6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */,
+				6B021F071F6007B20076B999 /* Activity.storyboard in Resources */,
 				6B956B0E1F5C126700FA9525 /* Assets.xcassets in Resources */,
+				6B021F031F6007820076B999 /* Search.storyboard in Resources */,
+				6B021F091F6007C20076B999 /* Profile.storyboard in Resources */,
 				6B0222A81F5E601F00AFE80F /* MobileCodes.json in Resources */,
+				6B021EFF1F6006420076B999 /* TabBar.storyboard in Resources */,
 				6B956B0C1F5C126700FA9525 /* Main.storyboard in Resources */,
+				6B021F051F6007990076B999 /* Push.storyboard in Resources */,
+				6B021F011F60071A0076B999 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

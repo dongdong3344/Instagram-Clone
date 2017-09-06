@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vlJ-Bv-t6K">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="47W-M0-uiN">
+            <objects>
+                <viewController id="ue3-rm-z3Z" customClass="SearchViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KTI-Ku-K4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="GT6-C1-2Kc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jwv-Ty-Ddo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMO-ua-J8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1422" y="-933"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GY1-Bh-EaE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vlJ-Bv-t6K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tabbar-search-icon" selectedImage="tabbar-search-icon-highlighted" id="dXU-hf-6NP">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EVf-ze-cPp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ue3-rm-z3Z" kind="relationship" relationship="rootViewController" id="Au1-aW-XM3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yze-ar-xDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1422" y="-1997"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar-search-icon" width="24" height="24"/>
+        <image name="tabbar-search-icon-highlighted" width="24" height="24"/>
+    </resources>
+</document>
