@@ -9,11 +9,11 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
  

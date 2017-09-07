@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--lnstagram-->
+        <!--Home View Controller-->
         <scene sceneID="HCF-kz-0nJ">
             <objects>
                 <viewController id="X2H-W9-mJ3" customClass="HomeViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2S0-Ys-zZ3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="lnstagram" id="mIu-Sv-P30">
+                    <navigationItem key="navigationItem" id="mIu-Sv-P30">
                         <barButtonItem key="leftBarButtonItem" image="bar-button-camera" style="done" id="SCi-CD-TEw">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>

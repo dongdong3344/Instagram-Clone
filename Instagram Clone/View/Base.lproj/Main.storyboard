@@ -23,13 +23,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBW-Ta-fXM">
-                                        <rect key="frame" x="87.5" y="42" width="200" height="60"/>
+                                        <rect key="frame" x="97.5" y="44.5" width="180" height="55"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="7mt-r2-AHM"/>
-                                            <constraint firstAttribute="height" constant="60" id="xio-9K-drt"/>
+                                            <constraint firstAttribute="width" constant="180" id="7mt-r2-AHM"/>
+                                            <constraint firstAttribute="height" constant="55" id="xio-9K-drt"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="logotype-feed"/>
+                                        <state key="normal" backgroundImage="logotype-feed"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,15 +276,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册即可查看好友的照片和视频。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-vn-4f8">
-                                        <rect key="frame" x="65" y="110" width="245" height="19.5"/>
+                                        <rect key="frame" x="65" y="115" width="245" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-GJ-bj1">
-                                        <rect key="frame" x="136" y="65" width="103" height="30"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-GJ-bj1">
+                                        <rect key="frame" x="97.5" y="55" width="180" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="PoX-QV-wiK"/>
+                                            <constraint firstAttribute="height" constant="50" id="dOl-SW-qoN"/>
+                                        </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="logotype-feed"/>
+                                        <state key="normal" backgroundImage="logotype-feed"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -293,7 +297,7 @@
                                     <constraint firstItem="d9t-GJ-bj1" firstAttribute="centerY" secondItem="2Vj-nX-QVm" secondAttribute="centerY" multiplier="0.8" id="8H4-Fc-i7S"/>
                                     <constraint firstAttribute="height" constant="200" id="Rel-4k-33Y"/>
                                     <constraint firstItem="d9t-GJ-bj1" firstAttribute="centerX" secondItem="2Vj-nX-QVm" secondAttribute="centerX" id="hHt-M7-fju"/>
-                                    <constraint firstItem="cct-vn-4f8" firstAttribute="top" secondItem="d9t-GJ-bj1" secondAttribute="bottom" constant="15" id="yfn-Dn-Gkf"/>
+                                    <constraint firstItem="cct-vn-4f8" firstAttribute="top" secondItem="d9t-GJ-bj1" secondAttribute="bottom" constant="10" id="yfn-Dn-Gkf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -869,6 +873,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ynz-JX-1yd"/>
-        <segue reference="qHp-2h-pF1"/>
+        <segue reference="SFc-Gn-BAW"/>
     </inferredMetricsTieBreakers>
 </document>
