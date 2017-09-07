@@ -17,6 +17,7 @@
 		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
 		6B0D41B91F61621900FC8ED6 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */; };
 		6B0D41BB1F61629600FC8ED6 /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */; };
+		6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C631F600E71003E0F47 /* MobileCodes.json */; };
 		6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */; };
 		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
@@ -107,6 +108,7 @@
 				6BCE873D1F5D4C5300AA50E1 /* View */,
 				6BCE873C1F5D4C4500AA50E1 /* Controller */,
 				6B956B0D1F5C126700FA9525 /* Assets.xcassets */,
+				6B207C631F600E71003E0F47 /* MobileCodes.json */,
 				6B207C621F600E71003E0F47 /* Info.plist */,
 			);
 			path = "Instagram Clone";
@@ -167,7 +169,6 @@
 		6BCE87401F5D4C6700AA50E1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				6B207C631F600E71003E0F47 /* MobileCodes.json */,
 				6B956B061F5C126700FA9525 /* AppDelegate.swift */,
 				6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */,
 				6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */,
@@ -234,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */,
 				6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */,
 				6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */,
 				6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */,

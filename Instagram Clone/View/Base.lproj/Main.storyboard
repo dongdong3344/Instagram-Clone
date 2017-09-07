@@ -516,12 +516,11 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-yt-zIM">
-                                        <rect key="frame" x="120" y="25" width="0.5" height="34"/>
+                                        <rect key="frame" x="110" y="25" width="0.5" height="34"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Xpy-Gf-OGn"/>
                                             <constraint firstAttribute="width" constant="0.5" id="sUe-3W-gvG"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="vaZ-X2-PCv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -559,7 +558,7 @@
                                     <constraint firstItem="Bt0-hk-Ej5" firstAttribute="top" secondItem="iv5-n5-8tK" secondAttribute="top" constant="20" id="EbC-Cp-dIU"/>
                                     <constraint firstItem="7pH-ze-pl9" firstAttribute="top" secondItem="a2J-7A-G0M" secondAttribute="bottom" constant="25" id="JOk-6w-INw"/>
                                     <constraint firstAttribute="height" constant="170" id="JYB-zK-gwV"/>
-                                    <constraint firstItem="DDa-yt-zIM" firstAttribute="leading" secondItem="Bt0-hk-Ej5" secondAttribute="trailing" constant="10" id="OK8-bg-waG"/>
+                                    <constraint firstItem="DDa-yt-zIM" firstAttribute="leading" secondItem="Bt0-hk-Ej5" secondAttribute="trailing" id="OK8-bg-waG"/>
                                     <constraint firstItem="zdk-39-0YP" firstAttribute="top" secondItem="7pH-ze-pl9" secondAttribute="bottom" constant="10" id="PN4-zi-daw"/>
                                     <constraint firstItem="a2J-7A-G0M" firstAttribute="top" secondItem="iv5-n5-8tK" secondAttribute="top" constant="20" id="a6a-GS-FOe"/>
                                     <constraint firstItem="zdk-39-0YP" firstAttribute="leading" secondItem="7pH-ze-pl9" secondAttribute="leading" id="cs2-Uo-jLB"/>
@@ -908,6 +907,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wDu-Rr-Akr"/>
-        <segue reference="qHp-2h-pF1"/>
+        <segue reference="7Rg-RN-wC2"/>
     </inferredMetricsTieBreakers>
 </document>
