@@ -71,13 +71,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-Lc-8N2" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-Lc-8N2" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="118" width="335" height="44"/>
                                         <color key="backgroundColor" red="0.56862745100000001" green="0.7843137255" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="jUr-xY-1pn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="登录">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -87,7 +86,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="WYB-lA-JVF" kind="presentation" id="Ynz-JX-1yd"/>
+                                            <action selector="loginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIc-P6-69g"/>
+                                            <segue destination="WYB-lA-JVF" kind="presentation" id="wDu-Rr-Akr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -193,6 +193,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NMe-zb-hgR">
+                                <rect key="frame" x="172" y="285" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="LYV-Tv-CNh"/>
+                                    <constraint firstAttribute="height" constant="30" id="XKe-qm-4dq"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -200,6 +207,8 @@
                             <constraint firstItem="6jk-gQ-Rl3" firstAttribute="top" secondItem="6fE-4m-VXD" secondAttribute="bottom" constant="25" id="77b-tB-MWE"/>
                             <constraint firstItem="Xme-48-ahX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="88t-ap-ssH"/>
                             <constraint firstItem="0Mr-vB-0x4" firstAttribute="top" secondItem="6jk-gQ-Rl3" secondAttribute="bottom" constant="30" id="9SQ-Sw-QQo"/>
+                            <constraint firstItem="NMe-zb-hgR" firstAttribute="centerY" secondItem="wLC-Lc-8N2" secondAttribute="centerY" id="B5O-p3-O6E"/>
+                            <constraint firstItem="NMe-zb-hgR" firstAttribute="centerX" secondItem="wLC-Lc-8N2" secondAttribute="centerX" id="CxN-cX-sFN"/>
                             <constraint firstItem="Dxm-Vj-cjU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DlH-j8-quh"/>
                             <constraint firstItem="YqE-tI-0Rn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Euk-fv-Qra"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YqE-tI-0Rn" secondAttribute="bottom" constant="12" id="Ige-87-0DN"/>
@@ -219,6 +228,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="NMe-zb-hgR" id="u6g-2P-2kH"/>
+                        <outlet property="loginButton" destination="wLC-Lc-8N2" id="dcw-3q-pEM"/>
+                        <outlet property="pwdTextField" destination="9Di-L7-UAR" id="u1g-eh-A3z"/>
+                        <outlet property="userNameTextField" destination="i8h-Hm-nhf" id="3Bp-BK-jHy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,7 +513,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-yt-zIM">
                                         <rect key="frame" x="120" y="25" width="0.5" height="34"/>
@@ -646,6 +661,7 @@
                     <connections>
                         <outlet property="bgViewLeftConstraint" destination="4pE-FG-xDa" id="jXT-sA-6Wi"/>
                         <outlet property="codeButton" destination="Bt0-hk-Ej5" id="Cfq-1G-Y5z"/>
+                        <outlet property="emailTextField" destination="C0i-rL-Dhn" id="Z59-Mw-8iD"/>
                         <outlet property="lineLeftConstraint" destination="u1L-Qk-91G" id="Rpr-WX-Civ"/>
                         <outlet property="mailButton" destination="2ao-Td-hEX" id="QTs-I5-REI"/>
                         <outlet property="phoneButton" destination="etI-1q-fXq" id="auB-wh-MWf"/>
@@ -671,10 +687,10 @@
             </objects>
             <point key="canvasLocation" x="-3503" y="1316"/>
         </scene>
-        <!--View Controller-->
+        <!--Password View Controller-->
         <scene sceneID="DHV-iQ-yuj">
             <objects>
-                <viewController id="a9E-UB-goB" sceneMemberID="viewController">
+                <viewController id="a9E-UB-goB" customClass="PasswordViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gsw-ME-Z0W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -794,15 +810,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J6O-ta-TKQ"/>
                     </view>
+                    <connections>
+                        <outlet property="fullNameTextField" destination="KeD-mr-a0n" id="6Sy-Ij-eWZ"/>
+                        <outlet property="nextButton" destination="D2I-0C-t3W" id="bhD-lj-8E3"/>
+                        <outlet property="passwordTextField" destination="edx-La-Zs6" id="7jy-AX-Vex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7db-Wg-vA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2383" y="752"/>
         </scene>
-        <!--View Controller-->
+        <!--Pick Image View Controller-->
         <scene sceneID="3JN-NA-fMd">
             <objects>
-                <viewController id="GPB-Ik-zpw" sceneMemberID="viewController">
+                <viewController id="GPB-Ik-zpw" customClass="PickImageViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oa0-5a-uen">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -886,7 +907,7 @@
         <image name="logotype-feed" width="103" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vUI-sG-xUa"/>
+        <segue reference="wDu-Rr-Akr"/>
         <segue reference="qHp-2h-pF1"/>
     </inferredMetricsTieBreakers>
 </document>

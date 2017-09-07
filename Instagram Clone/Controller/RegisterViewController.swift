@@ -15,6 +15,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var codeButton: UIButton!
     @IBOutlet weak var mailButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    
     var lastSelectedButton: UIButton!
     
     override func viewDidLoad() {

@@ -15,6 +15,8 @@
 		6B021F091F6007C20076B999 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B021F081F6007C20076B999 /* Profile.storyboard */; };
 		6B0222A51F5E4EF000AFE80F /* MobileCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0222A41F5E4EF000AFE80F /* MobileCode.swift */; };
 		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
+		6B0D41B91F61621900FC8ED6 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */; };
+		6B0D41BB1F61629600FC8ED6 /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */; };
 		6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */; };
 		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
@@ -32,6 +34,7 @@
 		6BED32BA1F5E6CE300973BF2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED32B91F5E6CE300973BF2 /* ActivityViewController.swift */; };
 		6BED32BC1F5E858E00973BF2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED32BB1F5E858E00973BF2 /* RegisterViewController.swift */; };
 		6BED32BE1F5E86B200973BF2 /* CodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED32BD1F5E86B200973BF2 /* CodeTableViewController.swift */; };
+		6BFA8F211F6141110058D565 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8F201F6141110058D565 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,8 @@
 		6B021F081F6007C20076B999 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		6B0222A41F5E4EF000AFE80F /* MobileCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCode.swift; sourceTree = "<group>"; };
 		6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
 		6B207C621F600E71003E0F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Billabong-Bold.otf"; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		6BED32B91F5E6CE300973BF2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		6BED32BB1F5E858E00973BF2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6BED32BD1F5E86B200973BF2 /* CodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewController.swift; sourceTree = "<group>"; };
+		6BFA8F201F6141110058D565 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 				6BED32B71F5E6CC500973BF2 /* ProfileViewController.swift */,
 				6BED32B91F5E6CE300973BF2 /* ActivityViewController.swift */,
 				6BED32BD1F5E86B200973BF2 /* CodeTableViewController.swift */,
+				6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */,
+				6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			children = (
 				6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */,
 				6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */,
+				6BFA8F201F6141110058D565 /* APIManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -248,15 +257,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B0222A51F5E4EF000AFE80F /* MobileCode.swift in Sources */,
+				6B0D41BB1F61629600FC8ED6 /* PickImageViewController.swift in Sources */,
 				6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */,
 				6BED32B81F5E6CC500973BF2 /* ProfileViewController.swift in Sources */,
 				6BED32BC1F5E858E00973BF2 /* RegisterViewController.swift in Sources */,
 				6BED32B41F5E6C9100973BF2 /* PushViewController.swift in Sources */,
 				6BED32B61F5E6C9D00973BF2 /* SearchViewController.swift in Sources */,
+				6BFA8F211F6141110058D565 /* APIManager.swift in Sources */,
 				6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */,
 				6BCE87331F5D1BB100AA50E1 /* IBDesignable.swift in Sources */,
 				6BED32BE1F5E86B200973BF2 /* CodeTableViewController.swift in Sources */,
 				6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */,
+				6B0D41B91F61621900FC8ED6 /* PasswordViewController.swift in Sources */,
 				6BED32B21F5E6C8200973BF2 /* HomeViewController.swift in Sources */,
 				6BCE873B1F5D443A00AA50E1 /* SignUpViewController.swift in Sources */,
 				6BED32BA1F5E6CE300973BF2 /* ActivityViewController.swift in Sources */,
