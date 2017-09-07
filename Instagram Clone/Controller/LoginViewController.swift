@@ -10,9 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
    var codes = [MobileCode]()
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-    
+      
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{

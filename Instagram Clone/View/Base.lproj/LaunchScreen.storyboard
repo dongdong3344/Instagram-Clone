@@ -38,24 +38,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logotype-feed" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-op-YOn">
-                                <rect key="frame" x="127" y="20" width="120" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="BDO-Gj-yw1"/>
-                                    <constraint firstAttribute="height" constant="44" id="lzr-dN-7QU"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBZ-G1-0q7">
+                                <rect key="frame" x="136" y="27" width="103" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="logotype-feed"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6rt-pg-jOG" secondAttribute="trailing" id="NjC-PE-gOS"/>
-                            <constraint firstItem="gNh-dj-uOQ" firstAttribute="top" secondItem="Pyf-op-YOn" secondAttribute="bottom" id="PhF-wq-ZyC"/>
                             <constraint firstItem="6rt-pg-jOG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QZG-av-BP2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6rt-pg-jOG" secondAttribute="bottom" constant="44" id="W2U-l0-e0T"/>
-                            <constraint firstItem="Pyf-op-YOn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="hG4-hm-YGd"/>
+                            <constraint firstItem="gNh-dj-uOQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="brc-rS-Gif"/>
+                            <constraint firstItem="cBZ-G1-0q7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="eNO-iE-aGw"/>
+                            <constraint firstItem="cBZ-G1-0q7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fMJ-WZ-UdD"/>
                             <constraint firstItem="gNh-dj-uOQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lGs-Jc-X9M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gNh-dj-uOQ" secondAttribute="trailing" id="s93-ds-aO8"/>
-                            <constraint firstItem="Pyf-op-YOn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wap-g5-wiO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
