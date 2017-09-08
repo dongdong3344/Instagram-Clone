@@ -827,13 +827,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2j-NO-Wfi">
-                                <rect key="frame" x="139.5" y="60" width="96" height="96"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="hero-camera"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rRl-An-0mq">
-                                <rect key="frame" x="20" y="181" width="335" height="134"/>
+                                <rect key="frame" x="20" y="170" width="335" height="134"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6m-aa-2QC">
                                         <rect key="frame" x="126.5" y="0.0" width="82" height="24"/>
@@ -853,7 +848,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Ydk-Vp-bmj"/>
                                         </constraints>
-                                        <state key="normal" title="添加照片">
+                                        <state key="normal" title="注册">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -861,6 +856,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerButtonClick:" destination="GPB-Ik-zpw" eventType="touchUpInside" id="9je-px-arb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -868,31 +866,29 @@
                                     <constraint firstAttribute="trailing" secondItem="Zkj-hx-NFt" secondAttribute="trailing" id="gWG-6v-YU1"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PT-Mx-byp">
-                                <rect key="frame" x="164" y="627" width="46" height="30"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-camera" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-7r-PJ4">
+                                <rect key="frame" x="137" y="50" width="100" height="100"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="SrF-zj-h29"/>
-                                    <constraint firstAttribute="height" constant="30" id="XwN-XG-zef"/>
+                                    <constraint firstAttribute="width" constant="100" id="887-AK-pSs"/>
+                                    <constraint firstAttribute="height" constant="100" id="P7C-Qs-xxJ"/>
                                 </constraints>
-                                <state key="normal" title="跳过"/>
-                                <connections>
-                                    <segue destination="WYB-lA-JVF" kind="presentation" id="vUI-sG-xUa"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3PT-Mx-byp" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="Bdt-8N-lCu"/>
+                            <constraint firstItem="cqB-7r-PJ4" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="1vD-ic-iQM"/>
                             <constraint firstItem="rRl-An-0mq" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="FSA-do-pQC"/>
-                            <constraint firstItem="2e9-63-bKP" firstAttribute="bottom" secondItem="3PT-Mx-byp" secondAttribute="bottom" constant="10" id="VlP-av-2yi"/>
-                            <constraint firstItem="rRl-An-0mq" firstAttribute="top" secondItem="X2j-NO-Wfi" secondAttribute="bottom" constant="25" id="bTF-JV-ME0"/>
+                            <constraint firstItem="rRl-An-0mq" firstAttribute="top" secondItem="cqB-7r-PJ4" secondAttribute="bottom" constant="20" id="OCd-ul-W0Y"/>
                             <constraint firstItem="rRl-An-0mq" firstAttribute="leading" secondItem="2e9-63-bKP" secondAttribute="leading" constant="20" id="dXo-P8-WL0"/>
-                            <constraint firstItem="X2j-NO-Wfi" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="j4X-Cp-hub"/>
-                            <constraint firstItem="X2j-NO-Wfi" firstAttribute="top" secondItem="2e9-63-bKP" secondAttribute="top" constant="40" id="uFk-xa-M7t"/>
                             <constraint firstItem="2e9-63-bKP" firstAttribute="trailing" secondItem="rRl-An-0mq" secondAttribute="trailing" constant="20" id="uT1-LF-d5K"/>
+                            <constraint firstItem="cqB-7r-PJ4" firstAttribute="top" secondItem="2e9-63-bKP" secondAttribute="top" constant="30" id="xDg-p7-vQf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2e9-63-bKP"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="cqB-7r-PJ4" id="dUh-TK-KDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReU-sn-3SI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -906,7 +902,6 @@
         <image name="logotype-feed" width="103" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wDu-Rr-Akr"/>
-        <segue reference="7Rg-RN-wC2"/>
+        <segue reference="qHp-2h-pF1"/>
     </inferredMetricsTieBreakers>
 </document>
