@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var mailButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nextButton: RoundButton!
     
     var lastSelectedButton: UIButton!
     
@@ -28,6 +29,14 @@ class RegisterViewController: UIViewController {
        
     }
 
+   
+    @IBAction func nextButtonClick(_ sender: Any) {
+        
+        if let email = emailTextField.text{
+            UserDefaults.standard.saveEmail(value: email)
+            
+        }
+    }
     @IBAction func buttonClick(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
@@ -44,7 +53,7 @@ class RegisterViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
      
-    }
+   }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     

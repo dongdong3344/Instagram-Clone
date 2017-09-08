@@ -473,6 +473,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonClick:" destination="W90-B1-6jv" eventType="touchUpInside" id="bVd-VU-hog"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5t-F0-k0A" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
                                         <rect key="frame" x="395" y="89" width="335" height="44"/>
@@ -492,6 +495,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="nextButtonClick:" destination="W90-B1-6jv" eventType="touchUpInside" id="nvw-7n-FYy"/>
                                             <segue destination="a9E-UB-goB" kind="custom" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="JjY-rh-ayM"/>
                                         </connections>
                                     </button>
@@ -663,6 +667,7 @@
                         <outlet property="emailTextField" destination="C0i-rL-Dhn" id="Z59-Mw-8iD"/>
                         <outlet property="lineLeftConstraint" destination="u1L-Qk-91G" id="Rpr-WX-Civ"/>
                         <outlet property="mailButton" destination="2ao-Td-hEX" id="QTs-I5-REI"/>
+                        <outlet property="nextButton" destination="r5t-F0-k0A" id="nLU-6m-Iql"/>
                         <outlet property="phoneButton" destination="etI-1q-fXq" id="auB-wh-MWf"/>
                     </connections>
                 </viewController>
@@ -695,7 +700,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-OU-Ztz">
-                                <rect key="frame" x="20" y="60" width="335" height="283.5"/>
+                                <rect key="frame" x="20" y="60" width="335" height="214.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名和密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-hP-0Pw">
                                         <rect key="frame" x="104" y="0.0" width="127" height="30"/>
@@ -709,7 +714,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  全名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeD-mr-a0n">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  全名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KeD-mr-a0n">
                                         <rect key="frame" x="0.0" y="101.5" width="335" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="wRN-tf-brS"/>
@@ -718,39 +723,21 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edx-La-Zs6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="edx-La-Zs6">
                                         <rect key="frame" x="0.0" y="170.5" width="335" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="eEl-CD-iEr"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2I-0C-t3W" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="239.5" width="335" height="44"/>
-                                        <color key="backgroundColor" red="0.56862745100000001" green="0.7843137255" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="8Qr-WY-tQR"/>
-                                        </constraints>
-                                        <state key="normal" title="下一步"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="GPB-Ik-zpw" kind="custom" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="yX7-GP-xF5"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="edx-La-Zs6" secondAttribute="trailing" id="4uQ-Ck-SDy"/>
                                     <constraint firstAttribute="trailing" secondItem="KeD-mr-a0n" secondAttribute="trailing" id="5XT-UI-Ja3"/>
-                                    <constraint firstAttribute="trailing" secondItem="D2I-0C-t3W" secondAttribute="trailing" id="GxT-KE-hTI"/>
                                     <constraint firstItem="KeD-mr-a0n" firstAttribute="top" secondItem="V5x-Qu-g28" secondAttribute="bottom" constant="25" id="HEP-bH-MX5"/>
                                     <constraint firstItem="KeD-mr-a0n" firstAttribute="leading" secondItem="UOc-OU-Ztz" secondAttribute="leading" id="Jsi-wT-Q4c"/>
-                                    <constraint firstItem="D2I-0C-t3W" firstAttribute="leading" secondItem="UOc-OU-Ztz" secondAttribute="leading" id="iTL-5l-YvB"/>
                                     <constraint firstItem="edx-La-Zs6" firstAttribute="leading" secondItem="UOc-OU-Ztz" secondAttribute="leading" id="wCx-Cn-FSY"/>
                                 </constraints>
                             </stackView>
@@ -794,14 +781,35 @@
                                     <constraint firstAttribute="height" constant="20" id="Z9K-An-gZZ"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2I-0C-t3W" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="311.5" width="335" height="44"/>
+                                <color key="backgroundColor" red="0.56862745100000001" green="0.7843137255" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Qr-WY-tQR"/>
+                                </constraints>
+                                <state key="normal" title="下一步"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonClick:" destination="a9E-UB-goB" eventType="touchUpInside" id="vey-m1-N7z"/>
+                                    <segue destination="GPB-Ik-zpw" kind="custom" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="yX7-GP-xF5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="D2I-0C-t3W" firstAttribute="leading" secondItem="J6O-ta-TKQ" secondAttribute="leading" constant="20" id="4kj-K5-Ymt"/>
                             <constraint firstItem="UOc-OU-Ztz" firstAttribute="leading" secondItem="J6O-ta-TKQ" secondAttribute="leading" constant="20" id="6TU-72-XI2"/>
+                            <constraint firstItem="J6O-ta-TKQ" firstAttribute="trailing" secondItem="D2I-0C-t3W" secondAttribute="trailing" constant="20" id="V6y-hy-v7M"/>
                             <constraint firstItem="C2F-EV-8VY" firstAttribute="top" secondItem="aw9-8E-tgd" secondAttribute="bottom" constant="12" id="VE6-al-tgy"/>
                             <constraint firstItem="J6O-ta-TKQ" firstAttribute="bottom" secondItem="C2F-EV-8VY" secondAttribute="bottom" constant="12" id="cVw-wE-hWB"/>
+                            <constraint firstItem="D2I-0C-t3W" firstAttribute="centerY" secondItem="Gsw-ME-Z0W" secondAttribute="centerY" id="dem-Ge-Z4J"/>
                             <constraint firstItem="UOc-OU-Ztz" firstAttribute="top" secondItem="J6O-ta-TKQ" secondAttribute="top" constant="40" id="ezg-gx-1Cf"/>
                             <constraint firstAttribute="trailing" secondItem="aw9-8E-tgd" secondAttribute="trailing" id="j2N-7h-ZMQ"/>
+                            <constraint firstItem="D2I-0C-t3W" firstAttribute="centerX" secondItem="Gsw-ME-Z0W" secondAttribute="centerX" id="lRw-ix-R8M"/>
                             <constraint firstItem="C2F-EV-8VY" firstAttribute="top" secondItem="aw9-8E-tgd" secondAttribute="bottom" constant="12" id="pYd-n9-MQj"/>
                             <constraint firstItem="aw9-8E-tgd" firstAttribute="leading" secondItem="Gsw-ME-Z0W" secondAttribute="leading" id="tZt-lN-IbZ"/>
                             <constraint firstItem="C2F-EV-8VY" firstAttribute="centerX" secondItem="Gsw-ME-Z0W" secondAttribute="centerX" id="u94-D5-ddG"/>
@@ -827,8 +835,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rRl-An-0mq">
-                                <rect key="frame" x="20" y="170" width="335" height="134"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rRl-An-0mq">
+                                <rect key="frame" x="20" y="170" width="335" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6m-aa-2QC">
                                         <rect key="frame" x="126.5" y="0.0" width="82" height="24"/>
@@ -837,34 +845,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加头像，方便好友找你" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h64-uw-Zlh">
-                                        <rect key="frame" x="94.5" y="49" width="146" height="16"/>
+                                        <rect key="frame" x="94.5" y="44" width="146" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkj-hx-NFt" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="335" height="44"/>
-                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Ydk-Vp-bmj"/>
-                                        </constraints>
-                                        <state key="normal" title="注册">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="registerButtonClick:" destination="GPB-Ik-zpw" eventType="touchUpInside" id="9je-px-arb"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Zkj-hx-NFt" firstAttribute="leading" secondItem="rRl-An-0mq" secondAttribute="leading" id="Mr7-p8-afm"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zkj-hx-NFt" secondAttribute="trailing" id="gWG-6v-YU1"/>
-                                </constraints>
                             </stackView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-camera" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-7r-PJ4">
                                 <rect key="frame" x="137" y="50" width="100" height="100"/>
@@ -874,13 +860,47 @@
                                     <constraint firstAttribute="height" constant="100" id="P7C-Qs-xxJ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkj-hx-NFt" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="312" width="335" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ydk-Vp-bmj"/>
+                                </constraints>
+                                <state key="normal" title="添加照片">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButtonClick:" destination="GPB-Ik-zpw" eventType="touchUpInside" id="9je-px-arb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okp-DM-5ei">
+                                <rect key="frame" x="171.5" y="626" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dvE-qU-Oxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="跳过"/>
+                                <connections>
+                                    <segue destination="WYB-lA-JVF" kind="presentation" id="x2X-yZ-B4y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cqB-7r-PJ4" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="1vD-ic-iQM"/>
+                            <constraint firstItem="Zkj-hx-NFt" firstAttribute="centerY" secondItem="oa0-5a-uen" secondAttribute="centerY" id="3Fh-Iq-yTB"/>
                             <constraint firstItem="rRl-An-0mq" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="FSA-do-pQC"/>
                             <constraint firstItem="rRl-An-0mq" firstAttribute="top" secondItem="cqB-7r-PJ4" secondAttribute="bottom" constant="20" id="OCd-ul-W0Y"/>
                             <constraint firstItem="rRl-An-0mq" firstAttribute="leading" secondItem="2e9-63-bKP" secondAttribute="leading" constant="20" id="dXo-P8-WL0"/>
+                            <constraint firstItem="Zkj-hx-NFt" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="kP3-bJ-nTF"/>
+                            <constraint firstItem="2e9-63-bKP" firstAttribute="bottom" secondItem="Okp-DM-5ei" secondAttribute="bottom" constant="11" id="mKy-aO-cVC"/>
+                            <constraint firstItem="2e9-63-bKP" firstAttribute="trailing" secondItem="Zkj-hx-NFt" secondAttribute="trailing" constant="20" id="mht-tC-1ZM"/>
+                            <constraint firstItem="Okp-DM-5ei" firstAttribute="centerX" secondItem="oa0-5a-uen" secondAttribute="centerX" id="sha-sf-oZI"/>
                             <constraint firstItem="2e9-63-bKP" firstAttribute="trailing" secondItem="rRl-An-0mq" secondAttribute="trailing" constant="20" id="uT1-LF-d5K"/>
                             <constraint firstItem="cqB-7r-PJ4" firstAttribute="top" secondItem="2e9-63-bKP" secondAttribute="top" constant="30" id="xDg-p7-vQf"/>
                         </constraints>
@@ -902,6 +922,7 @@
         <image name="logotype-feed" width="103" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="x2X-yZ-B4y"/>
         <segue reference="qHp-2h-pF1"/>
     </inferredMetricsTieBreakers>
 </document>

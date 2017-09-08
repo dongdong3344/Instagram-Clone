@@ -27,7 +27,12 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectProfileImage))
         profileImageView.addGestureRecognizer(tapGesture)
+        
+        name  = UserDefaults.standard.getName()
+        email = UserDefaults.standard.getEmail()
+        password = UserDefaults.standard.getPassword()
     
+        print(name!,email!,password!)
  
     }
     
@@ -75,7 +80,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
         guard let name = name,let email = email,let password = password else { return }
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error != nil{
-                print(error!)
+                self.presentErrorMessage(error!.localizedDescription)
             }
             guard let uid = user?.uid else {
                 return
@@ -86,7 +91,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
                 
                 storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                     if error != nil{
-                       print(error!)
+                       self.presentErrorMessage(error!.localizedDescription)
                        return
                     }
                     if let profileImageURL = metadata?.downloadURL()?.absoluteString{
@@ -106,15 +111,23 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
         let ref = Database.database().reference()
         let usersReference = ref.child("Users").child(uid)
         
-        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+        usersReference.updateChildValues(values, withCompletionBlock: { (error, ref) in
             
-            if err != nil {
-                print(err!)
+            if error != nil {
+               self.presentErrorMessage(error!.localizedDescription)
                 return
             }
             
             self.dismiss(animated: true, completion: nil)
         })
+    }
+    
+    func presentErrorMessage(_ message:String){
+        
+        let alert = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
     }
 
 }
