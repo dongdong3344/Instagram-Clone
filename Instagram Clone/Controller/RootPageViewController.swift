@@ -26,8 +26,11 @@ class RootPageViewController: UIPageViewController,UIPageViewControllerDataSourc
         super.viewDidLoad()
         
         dataSource = self
-       
-       setViewControllers([controllers[1]], direction: .reverse, animated: false, completion: nil)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        
+        setViewControllers([controllers[1]], direction: .reverse, animated: false, completion: nil)
        
         
     }

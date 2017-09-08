@@ -125,7 +125,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
     func presentErrorMessage(_ message:String){
         
         let alert = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+        let alertAction = UIAlertAction(title: "我知道了", style: .cancel, handler: nil)
         alert.addAction(alertAction)
         present(alert, animated: true, completion: nil)
     }
