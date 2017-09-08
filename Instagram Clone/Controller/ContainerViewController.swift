@@ -1,5 +1,5 @@
 //
-//  RootPageViewController.swift
+//  ContainerViewController.swift
 //  Instagram Clone
 //
 //  Created by lindongdong on 2017/9/8.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class RootPageViewController: UIPageViewController,UIPageViewControllerDataSource {
-    
+class ContainerViewController: UIViewController,UIPageViewControllerDataSource,UIPageViewControllerDelegate {
     
     lazy var controllers:[UIViewController] = {
         
@@ -24,24 +23,33 @@ class RootPageViewController: UIPageViewController,UIPageViewControllerDataSourc
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dataSource = self
-        
         navigationController?.setNavigationBarHidden(true, animated: false)
+        setupPageViewController()
+
+    }
+    
+    func setupPageViewController(){
         
-        
-        setViewControllers([controllers[1]], direction: .reverse, animated: false, completion: nil)
+        let pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
        
+        pageVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height  + 64)
+     
+        pageVC.delegate = self
+        pageVC.dataSource = self
+        pageVC.setViewControllers([controllers[1]], direction: .forward, animated: false, completion: nil
+        )
+        
+        addChildViewController(pageVC)
+        view.addSubview(pageVC.view)
+        pageVC.didMove(toParentViewController: self)
         
     }
-   
-    
     func indexForViewController(controller:UIViewController) -> Int {
         
         return controllers.index(of: controller)!
         
     }
-   
+    
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?{
         
@@ -52,7 +60,7 @@ class RootPageViewController: UIPageViewController,UIPageViewControllerDataSourc
         return controllers[index - 1]
     }
     
-   
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?{
         
         let index = indexForViewController(controller:viewController )
@@ -62,6 +70,7 @@ class RootPageViewController: UIPageViewController,UIPageViewControllerDataSourc
         return controllers[index + 1]
         
     }
+    
     
 
 }

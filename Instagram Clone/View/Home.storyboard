@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="9rS-Yx-L8b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.79025607638888884" green="0.72037760416666663" blue="0.49666341145833331" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="2S0-Ys-zZ3"/>
                     </view>
                     <navigationItem key="navigationItem" id="mIu-Sv-P30">
@@ -40,7 +40,7 @@
                     <view key="view" contentMode="scaleToFill" id="gbR-xN-ylX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.56862745100000001" green="0.7843137255" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bAk-vf-SEC"/>
                     </view>
                 </viewController>
@@ -55,7 +55,7 @@
                     <view key="view" contentMode="scaleToFill" id="uvU-c0-mwX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.72037760416666663" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="0F0-aP-zNg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Direct" id="Jdq-ji-g6i">
@@ -69,18 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoY-oL-vq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="-827"/>
-        </scene>
-        <!--Root Page View Controller-->
-        <scene sceneID="BEX-TC-VaW">
-            <objects>
-                <pageViewController transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="4uk-sJ-jxa" customClass="RootPageViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="fAq-GP-q7a"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ui7-gO-r3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="273" y="-1522"/>
+            <point key="canvasLocation" x="1966" y="-827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h8h-IA-rYa">
@@ -98,12 +87,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4uk-sJ-jxa" kind="relationship" relationship="rootViewController" id="ShD-2D-Zmb"/>
+                        <segue destination="zNw-Gb-JBb" kind="relationship" relationship="rootViewController" id="MT2-PC-4Fy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrQ-OG-WIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="-1522"/>
+            <point key="canvasLocation" x="-818" y="-1522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1w3-1S-a1N">
@@ -126,6 +115,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pg-Yo-v3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108.8" y="-1522.0389805097452"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="Kgn-SV-d8B">
+            <objects>
+                <viewController id="zNw-Gb-JBb" customClass="ContainerViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q03-F0-U3f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="QIz-bG-59y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yah-oh-PYH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFA-29-mzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="-1522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwA-yy-yov">
