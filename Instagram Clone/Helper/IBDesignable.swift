@@ -13,10 +13,12 @@ import UIKit
 class LeftPaddedTextField: UITextField {
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
+        
         return CGRect(x: bounds.origin.x + 100, y: bounds.origin.y, width: bounds.width , height: bounds.height)
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        
         return CGRect(x: bounds.origin.x + 100, y: bounds.origin.y, width: bounds.width , height: bounds.height)
     }
     
@@ -42,7 +44,7 @@ class CustomView:UIView {
         colorArray.append((colorOne: #colorLiteral(red: 0.8726018439, green: 0.4296181168, blue: 0.9771573604, alpha: 1), colorTwo:#colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1) ))
         colorArray.append((colorOne: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1), colorTwo:#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1) ))
         
-        animateBackgroundColor()
+      //  animateBackgroundColor()
  
     }
     
@@ -113,6 +115,7 @@ class CustomSlider: UISlider {
     
 
     @IBInspectable var thumbImage:UIImage?{
+        
         didSet{
             setThumbImage(thumbImage, for: .normal)
       }
