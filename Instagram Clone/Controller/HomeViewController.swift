@@ -20,12 +20,11 @@ class HomeViewController: UIViewController {
     func setupNavigationbar(){
       
         let logoImageView = UIImageView()
+        logoImageView.frame = CGRect(x: 0, y: 0, width: 103, height: 30)
         logoImageView.image = #imageLiteral(resourceName: "logotype-feed")
         logoImageView.tintColor = .black
         navigationItem.titleView = logoImageView
-        
-        
-        
+    
     }
     
 

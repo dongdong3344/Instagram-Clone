@@ -31,7 +31,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0PI-56-Ti0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar-activity-icon" selectedImage="tabbar-activity-icon-highlighted" id="ETS-pb-exB">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

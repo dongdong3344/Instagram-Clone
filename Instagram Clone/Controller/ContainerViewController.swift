@@ -24,11 +24,11 @@ class ContainerViewController: UIViewController,UIPageViewControllerDataSource,U
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
-        setupPageViewController()
+        initPageVC()
 
     }
     
-    func setupPageViewController(){
+    func initPageVC(){
         
         let pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
        

@@ -17,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="9rS-Yx-L8b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.79025607638888884" green="0.72037760416666663" blue="0.49666341145833331" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2S0-Ys-zZ3"/>
                     </view>
                     <navigationItem key="navigationItem" id="mIu-Sv-P30">
@@ -55,15 +55,15 @@
                     <view key="view" contentMode="scaleToFill" id="uvU-c0-mwX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.72037760416666663" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="0F0-aP-zNg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Direct" id="Jdq-ji-g6i">
-                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="c4O-xK-QB5">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" image="bar-button-back" id="c4O-xK-QB5">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wvf-is-nQt">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="rightBarButtonItem" image="bar-button-plus" id="Wvf-is-nQt">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -77,7 +77,7 @@
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="4rG-pQ-qvj" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" image="tabbar-home-icon" selectedImage="tabbar-home-icon-highlighted" id="uIR-1b-IP9">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
@@ -154,7 +154,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar-button-back" width="12" height="20"/>
         <image name="bar-button-camera" width="24" height="24"/>
+        <image name="bar-button-plus" width="24" height="24"/>
         <image name="tabbar-home-icon" width="24" height="24"/>
         <image name="tabbar-home-icon-highlighted" width="24" height="24"/>
         <image name="ufi-button-share-plane" width="24" height="24"/>

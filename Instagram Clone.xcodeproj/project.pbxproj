@@ -17,8 +17,8 @@
 		6B0222A51F5E4EF000AFE80F /* MobileCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0222A41F5E4EF000AFE80F /* MobileCode.swift */; };
 		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
 		6B07A5601F62B99F00D247CE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B07A55F1F62B99F00D247CE /* ContainerViewController.swift */; };
-		6B080BF91F6253050073372B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B080BF81F623C400073372B /* GoogleService-Info.plist */; };
 		6B080BFB1F62621B0073372B /* UserDefalutsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B080BFA1F62621B0073372B /* UserDefalutsHelper.swift */; };
+		6B0C1D6E1F635DE200ACD1A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */; };
 		6B0D41B91F61621900FC8ED6 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */; };
 		6B0D41BB1F61629600FC8ED6 /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */; };
 		6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C631F600E71003E0F47 /* MobileCodes.json */; };
@@ -55,8 +55,8 @@
 		6B0222A41F5E4EF000AFE80F /* MobileCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCode.swift; sourceTree = "<group>"; };
 		6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		6B07A55F1F62B99F00D247CE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		6B080BF81F623C400073372B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B080BFA1F62621B0073372B /* UserDefalutsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefalutsHelper.swift; sourceTree = "<group>"; };
+		6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
 		6B0D41C01F62174600FC8ED6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 				6BCE873D1F5D4C5300AA50E1 /* View */,
 				6BCE873C1F5D4C4500AA50E1 /* Controller */,
 				6B956B0D1F5C126700FA9525 /* Assets.xcassets */,
-				6B080BF81F623C400073372B /* GoogleService-Info.plist */,
 				6B207C631F600E71003E0F47 /* MobileCodes.json */,
+				6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */,
 				6B207C621F600E71003E0F47 /* Info.plist */,
 			);
 			path = "Instagram Clone";
@@ -288,7 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B080BF91F6253050073372B /* GoogleService-Info.plist in Resources */,
+				6B0C1D6E1F635DE200ACD1A4 /* GoogleService-Info.plist in Resources */,
 				6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */,
 				6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */,
 				6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */,
@@ -535,7 +535,7 @@
 				INFOPLIST_FILE = "Instagram Clone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,7 +553,7 @@
 				INFOPLIST_FILE = "Instagram Clone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

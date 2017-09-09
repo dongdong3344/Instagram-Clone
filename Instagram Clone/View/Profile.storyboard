@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="AFX-ni-9wR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WjD-bx-EKR"/>
+                    <navigationItem key="navigationItem" id="WjD-bx-EKR">
+                        <barButtonItem key="leftBarButtonItem" title="ringo_2017" id="0AD-lp-9MJ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="bar-button-more" id="5UN-5X-LuU">
+                                <inset key="imageInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bar-button-discover-people-2" id="DSo-HW-QM4">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bar-button-favorites" id="rEQ-o7-h32">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bar-button-archive" id="GiQ-YP-5uH">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="bar-button-savehome" id="hg2-Hv-ULc">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Siu-fG-nqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,7 +54,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T6J-Yl-T4o" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabbar-profile-icon" selectedImage="tabbar-profile-icon-highlighted" id="WPT-Km-p2b">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -52,6 +75,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar-button-archive" width="24" height="24"/>
+        <image name="bar-button-discover-people-2" width="24" height="24"/>
+        <image name="bar-button-favorites" width="24" height="24"/>
+        <image name="bar-button-more" width="24" height="24"/>
+        <image name="bar-button-savehome" width="24" height="24"/>
         <image name="tabbar-profile-icon" width="24" height="24"/>
         <image name="tabbar-profile-icon-highlighted" width="24" height="24"/>
     </resources>

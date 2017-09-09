@@ -32,7 +32,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
         email = UserDefaults.standard.getEmail()
         password = UserDefaults.standard.getPassword()
     
-        print(name!,email!,password!)
+       // print(name!,email!,password!)
  
     }
     
@@ -69,7 +69,6 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
     @objc func selectProfileImage(){
         
         let picker = UIImagePickerController()
-        
         picker.delegate = self
         picker.allowsEditing = true
         present(picker, animated: true, completion: nil)
@@ -82,9 +81,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
             if error != nil{
                 self.presentErrorMessage(error!.localizedDescription)
             }
-            guard let uid = user?.uid else {
-                return
-            }
+            guard let uid = user?.uid else { return }
             let imageName = UUID().uuidString
             let storageRef = Storage.storage().reference().child("ProfileImages").child("\(imageName).jpg")
             if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
@@ -96,9 +93,12 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
                     }
                     if let profileImageURL = metadata?.downloadURL()?.absoluteString{
                         
+                        
                         let values = ["name":name, "email": email, "profileImageURL": profileImageURL]
                         
                         self.registerUserIntoDatabaseWithUID(uid, values: values as [String : AnyObject])
+                        
+                      
                     }
                 })
                 
@@ -108,16 +108,18 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
-        let ref = Database.database().reference()
-        let usersReference = ref.child("Users").child(uid)
         
-        usersReference.updateChildValues(values, withCompletionBlock: { (error, ref) in
+        let dataRef = Database.database().reference().child("Users").child(uid)
+        
+        dataRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
             
             if error != nil {
+               print("———————————出错la——————————")
                self.presentErrorMessage(error!.localizedDescription)
-                return
+               return
             }
             
+            print("——————————成功啦——————————————")
             self.dismiss(animated: true, completion: nil)
         })
     }
