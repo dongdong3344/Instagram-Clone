@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
     
-    var lastSelectedButton:UIButton!
-
+    @IBOutlet weak var profileImageView: CustomImageView!
     @IBOutlet weak var gridButton: UIButton!
+    @IBOutlet weak var displayName: UILabel!
+    var lastSelectedButton:UIButton!
+    var databaseRef : DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +24,29 @@ class ProfileViewController: UIViewController {
         lastSelectedButton = gridButton
         
         addRightBarButtonItems()
+        
+       // fetchUserInfo()
+        
+    }
+    
+    
+    func fetchUserInfo(){
+        databaseRef = Database.database().reference()
+        if let userID = Auth.auth().currentUser?.uid{
+            databaseRef.child("Users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dict = snapshot.value as? NSDictionary{
+                    
+                    if let name = dict["name"] as? String,let profileImageURL = dict["profileImageURL"] as? String{
+                        
+                        DispatchQueue.main.async {
+                            self.displayName.text = name
+                            self.profileImageView.loadImageWithString(profileImageURL)
+                        }
+                        
+                    }
+                }
+            })
+        }
         
     }
     @IBAction func tabButtonClick(_ sender: UIButton) {

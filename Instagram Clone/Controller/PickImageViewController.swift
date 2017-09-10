@@ -93,6 +93,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
                     }
                     if let profileImageURL = metadata?.downloadURL()?.absoluteString{
                         
+                        print(profileImageURL)
                         
                         let values = ["name":name, "email": email, "profileImageURL": profileImageURL]
                         
@@ -109,12 +110,12 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
     
     func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
         
-        let dataRef = Database.database().reference().child("Users").child(uid)
+        let databaseRef = Database.database().reference().child("Users").child(uid)
         
-        dataRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
+       databaseRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
             
             if error != nil {
-               print("———————————出错la——————————")
+               print("———————————出错啦——————————")
                self.presentErrorMessage(error!.localizedDescription)
                return
             }
