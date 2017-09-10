@@ -26,6 +26,7 @@
 		6B0D41C31F62176500FC8ED6 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41C21F62176500FC8ED6 /* MessageViewController.swift */; };
 		6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */; };
 		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
+		6B9543831F64BAC2000EB174 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9543821F64BAC2000EB174 /* Extension.swift */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
 		6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B081F5C126700FA9525 /* LoginViewController.swift */; };
 		6B956B0C1F5C126700FA9525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0A1F5C126700FA9525 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Billabong-Bold.otf"; sourceTree = "<group>"; };
 		6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileCodes.storyboard; sourceTree = "<group>"; };
+		6B9543821F64BAC2000EB174 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6B956B031F5C126700FA9525 /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B956B061F5C126700FA9525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B956B081F5C126700FA9525 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */,
+				6B9543821F64BAC2000EB174 /* Extension.swift */,
 				6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */,
 				6BFA8F201F6141110058D565 /* APIManager.swift */,
 				6B080BFA1F62621B0073372B /* UserDefalutsHelper.swift */,
@@ -381,6 +384,7 @@
 				6BED32B41F5E6C9100973BF2 /* PushViewController.swift in Sources */,
 				6BED32B61F5E6C9D00973BF2 /* SearchViewController.swift in Sources */,
 				6BFA8F211F6141110058D565 /* APIManager.swift in Sources */,
+				6B9543831F64BAC2000EB174 /* Extension.swift in Sources */,
 				6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */,
 				6BCE87331F5D1BB100AA50E1 /* IBDesignable.swift in Sources */,
 				6BED32BE1F5E86B200973BF2 /* CodeTableViewController.swift in Sources */,
