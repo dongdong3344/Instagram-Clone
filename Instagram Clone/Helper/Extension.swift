@@ -10,7 +10,7 @@ import UIKit
 
 
 extension UIBarButtonItem {
-    i
+    
    static func itemWithImage(_ image:UIImage,action:Selector) -> UIBarButtonItem{
         
         let itemButton = UIButton(type: .custom)

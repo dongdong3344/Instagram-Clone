@@ -9,14 +9,29 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var lastSelectedButton:UIButton!
 
+    @IBOutlet weak var gridButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       addRightBarButtonItems()
+        
+        gridButton.isSelected = true
+        gridButton.tintColor = UIColor(red: 36/255, green: 146/255, blue: 244/255, alpha: 1)
+        lastSelectedButton = gridButton
+        
+        addRightBarButtonItems()
         
     }
+    @IBAction func tabButtonClick(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        sender.tintColor = UIColor(red: 36/255, green: 146/255, blue: 244/255, alpha: 1)
+        lastSelectedButton.isSelected = false
+        lastSelectedButton.tintColor = .black
+        lastSelectedButton = sender
     
+    }
     
     func addRightBarButtonItems(){
         

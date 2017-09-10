@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Instagram_logo.png",
+      "filename" : "profile-grid.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "profile-grid@2x.png",
       "scale" : "2x"
     },
     {
