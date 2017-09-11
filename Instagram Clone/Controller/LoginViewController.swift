@@ -12,7 +12,9 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
-   
+    @IBAction func addProfileImage(_ sender: Any) {
+    }
+    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -37,6 +39,8 @@ class LoginViewController: UIViewController {
     func fbButtonClick(){
         
         let fbLogin = FBSDKLoginManager()
+        @IBAction func addNewProfileImage(_ sender: Any) {
+        }
         fbLogin.logIn(withReadPermissions: ["email", "public_profile", "user_friends"], from: self) { (result, error) in
             if let error = error {
                 self.presentErrorMessage(error.localizedDescription)
@@ -63,7 +67,6 @@ class LoginViewController: UIViewController {
                 self.presentErrorMessage(error.localizedDescription)
                 return
             }
-            print(user!)
         }
         
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start(completionHandler: { (connection, result, error) in

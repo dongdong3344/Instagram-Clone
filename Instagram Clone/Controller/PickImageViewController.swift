@@ -93,7 +93,7 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
                     }
                     if let profileImageURL = metadata?.downloadURL()?.absoluteString{
                         
-                        print(profileImageURL)
+                      //  print(profileImageURL)
                         
                         let values = ["name":name, "email": email, "profileImageURL": profileImageURL]
                         

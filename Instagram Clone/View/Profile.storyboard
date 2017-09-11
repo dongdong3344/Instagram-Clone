@@ -68,6 +68,9 @@
                                     <constraint firstAttribute="width" secondItem="rQH-bU-z3X" secondAttribute="height" multiplier="1:1" id="NVP-ka-rDu"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="empty-story-badge-big"/>
+                                <connections>
+                                    <action selector="addProfileImage:" destination="bbJ-xh-8Zi" eventType="touchUpInside" id="k6z-cp-sXC"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-fi-Jpk">
                                 <rect key="frame" x="120" y="25" width="240" height="35"/>

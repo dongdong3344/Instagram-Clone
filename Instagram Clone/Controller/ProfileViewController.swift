@@ -11,6 +11,7 @@ import Firebase
 
 class ProfileViewController: UIViewController {
     
+   
     @IBOutlet weak var profileImageView: CustomImageView!
     @IBOutlet weak var gridButton: UIButton!
     @IBOutlet weak var displayName: UILabel!
@@ -33,7 +34,6 @@ class ProfileViewController: UIViewController {
         
     }
     
-    
     func fetchUserInfo(){
         databaseRef = Database.database().reference()
         if let userID = Auth.auth().currentUser?.uid{
@@ -48,6 +48,37 @@ class ProfileViewController: UIViewController {
             })
         }
         
+    }
+    
+    @IBAction func addProfileImage(_ sender: Any) {
+        
+         guard let uid = Auth.auth().currentUser?.uid else { return }
+         let imageName = UUID().uuidString
+         let storageRef = Storage.storage().reference().child("ProfileImages").child("\(imageName).jpg")
+        if let profileImage = self.profileImageView.image, let newImage = UIImageJPEGRepresentation(profileImage, 0.1) {
+            storageRef.putData(newImage, metadata: nil, completion: { (metadata, error) in
+                if error != nil{
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                if let newImageURL = metadata?.downloadURL()?.absoluteString{
+                    
+                    let newValue = ["profileImageURL": newImageURL]
+                    Database.database().reference().child("Users").child(uid).updateChildValues(newValue, withCompletionBlock: { (error, ref) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                            return 
+                        }
+                        print("update new image ")
+                    })
+                    
+                }
+                
+            })
+            
+        }
+      
     }
     @IBAction func tabButtonClick(_ sender: UIButton) {
         
