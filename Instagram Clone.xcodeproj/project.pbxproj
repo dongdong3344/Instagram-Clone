@@ -66,6 +66,8 @@
 		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Billabong-Bold.otf"; sourceTree = "<group>"; };
 		6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileCodes.storyboard; sourceTree = "<group>"; };
+		6B93335D1F665994008CC94D /* My-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My-Bridging-header.h"; sourceTree = "<group>"; };
+		6B93335F1F665AB7008CC94D /* Instagram Clone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Instagram Clone.entitlements"; sourceTree = "<group>"; };
 		6B9543821F64BAC2000EB174 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6B956B031F5C126700FA9525 /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B956B061F5C126700FA9525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		6B956B051F5C126700FA9525 /* Instagram Clone */ = {
 			isa = PBXGroup;
 			children = (
+				6B93335F1F665AB7008CC94D /* Instagram Clone.entitlements */,
 				6BCE87401F5D4C6700AA50E1 /* Other */,
 				6BCE873F1F5D4C5F00AA50E1 /* Helper */,
 				6BCE873E1F5D4C5900AA50E1 /* Model */,
@@ -204,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				6B956B061F5C126700FA9525 /* AppDelegate.swift */,
+				6B93335D1F665994008CC94D /* My-Bridging-header.h */,
 				6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */,
 				6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */,
 			);
@@ -257,6 +261,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -351,6 +358,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Instagram Clone/Pods-Instagram Clone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -358,6 +369,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -533,7 +548,7 @@
 			baseConfigurationReference = 326DDB34F965713CA121F0FA /* Pods-Instagram Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "Instagram Clone/Instagram Clone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6ZDLRSM4A;
 				INFOPLIST_FILE = "Instagram Clone/Info.plist";
@@ -551,7 +566,7 @@
 			baseConfigurationReference = BE7136387F7D30FC4DB11EC6 /* Pods-Instagram Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "Instagram Clone/Instagram Clone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6ZDLRSM4A;
 				INFOPLIST_FILE = "Instagram Clone/Info.plist";

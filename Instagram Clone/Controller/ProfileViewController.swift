@@ -16,6 +16,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var displayName: UILabel!
     var lastSelectedButton:UIButton!
     var databaseRef : DatabaseReference!
+    lazy var nameLabel: UILabel = {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
+        return label
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,9 +27,9 @@ class ProfileViewController: UIViewController {
         gridButton.tintColor = UIColor(red: 36/255, green: 146/255, blue: 244/255, alpha: 1)
         lastSelectedButton = gridButton
         
-        addRightBarButtonItems()
+        addBarButtonItems()
         
-       // fetchUserInfo()
+        fetchUserInfo()
         
     }
     
@@ -35,14 +39,10 @@ class ProfileViewController: UIViewController {
         if let userID = Auth.auth().currentUser?.uid{
             databaseRef.child("Users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let dict = snapshot.value as? NSDictionary{
-                    
                     if let name = dict["name"] as? String,let profileImageURL = dict["profileImageURL"] as? String{
-                        
-                        DispatchQueue.main.async {
-                            self.displayName.text = name
-                            self.profileImageView.loadImageWithString(profileImageURL)
-                        }
-                        
+                        self.displayName.text = name
+                        self.nameLabel.text = name
+                        self.profileImageView.loadImageWithString(profileImageURL)
                     }
                 }
             })
@@ -59,7 +59,7 @@ class ProfileViewController: UIViewController {
     
     }
     
-    func addRightBarButtonItems(){
+    func addBarButtonItems(){
         
         
         let saveHome = UIBarButtonItem.itemWithImage(#imageLiteral(resourceName: "bar-button-savehome"), action:#selector(ProfileViewController.saveHome))
@@ -76,6 +76,7 @@ class ProfileViewController: UIViewController {
         spacer.width = -15
         navigationItem.rightBarButtonItems = [spacer,more,discover,favorites,archive,saveHome]
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: nameLabel)
         
     }
 

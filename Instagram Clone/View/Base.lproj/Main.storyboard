@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIc-P6-69g"/>
-                                            <segue destination="WYB-lA-JVF" kind="presentation" id="wDu-Rr-Akr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -173,26 +172,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Mr-vB-0x4">
-                                <rect key="frame" x="114" y="432" width="147" height="15"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb-icon" translatesAutoresizingMaskIntoConstraints="NO" id="vCk-UO-yGt">
-                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="15" id="cYs-Ng-EFt"/>
-                                            <constraint firstAttribute="height" constant="15" id="foI-PU-2iw"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-wy-HIB">
-                                        <rect key="frame" x="25" y="0.0" width="122" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                        <state key="normal" title="使用Facebook登录">
-                                            <color key="titleColor" red="0.17254901960784313" green="0.45490196078431372" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NMe-zb-hgR">
                                 <rect key="frame" x="172" y="285" width="30" height="30"/>
                                 <constraints>
@@ -200,13 +179,25 @@
                                     <constraint firstAttribute="height" constant="30" id="XKe-qm-4dq"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-wy-HIB">
+                                <rect key="frame" x="88" y="427" width="200" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="r40-Da-zWc"/>
+                                </constraints>
+                                <color key="tintColor" red="0.56862745100000001" green="0.7843137255" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="使用facebook登录" image="facebook-login-icon"/>
+                                <connections>
+                                    <action selector="fbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HQ-8e-IgN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wi7-w3-bDL" firstAttribute="centerY" secondItem="6jk-gQ-Rl3" secondAttribute="centerY" id="25J-Pt-2cj"/>
+                            <constraint firstItem="Rdv-wy-HIB" firstAttribute="top" secondItem="6jk-gQ-Rl3" secondAttribute="bottom" constant="25" id="3hE-1N-Yyo"/>
                             <constraint firstItem="6jk-gQ-Rl3" firstAttribute="top" secondItem="6fE-4m-VXD" secondAttribute="bottom" constant="25" id="77b-tB-MWE"/>
                             <constraint firstItem="Xme-48-ahX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="88t-ap-ssH"/>
-                            <constraint firstItem="0Mr-vB-0x4" firstAttribute="top" secondItem="6jk-gQ-Rl3" secondAttribute="bottom" constant="30" id="9SQ-Sw-QQo"/>
                             <constraint firstItem="NMe-zb-hgR" firstAttribute="centerY" secondItem="wLC-Lc-8N2" secondAttribute="centerY" id="B5O-p3-O6E"/>
                             <constraint firstItem="NMe-zb-hgR" firstAttribute="centerX" secondItem="wLC-Lc-8N2" secondAttribute="centerX" id="CxN-cX-sFN"/>
                             <constraint firstItem="Dxm-Vj-cjU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DlH-j8-quh"/>
@@ -223,14 +214,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxm-Vj-cjU" secondAttribute="trailing" id="hFi-T2-nbN"/>
                             <constraint firstItem="BHa-fT-Q1H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hH8-Sz-UUT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xme-48-ahX" secondAttribute="trailing" constant="20" id="hQW-sP-FYF"/>
-                            <constraint firstItem="0Mr-vB-0x4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kpZ-cp-owz"/>
+                            <constraint firstItem="Rdv-wy-HIB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rWn-C2-xSs"/>
                             <constraint firstItem="BHa-fT-Q1H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uUS-c3-HsI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="accountTextField" destination="i8h-Hm-nhf" id="Ucy-D3-afI"/>
                         <outlet property="activityIndicator" destination="NMe-zb-hgR" id="u6g-2P-2kH"/>
                         <outlet property="loginButton" destination="wLC-Lc-8N2" id="dcw-3q-pEM"/>
+                        <outlet property="passwordTextField" destination="9Di-L7-UAR" id="gaf-tS-D5E"/>
                         <outlet property="pwdTextField" destination="9Di-L7-UAR" id="u1g-eh-A3z"/>
                         <outlet property="userNameTextField" destination="i8h-Hm-nhf" id="3Bp-BK-jHy"/>
                     </connections>
@@ -917,12 +910,10 @@
     </scenes>
     <resources>
         <image name="facebook-login-icon" width="22" height="22"/>
-        <image name="fb-icon" width="40" height="40"/>
         <image name="hero-camera" width="96" height="96"/>
         <image name="logotype-feed" width="103" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x2X-yZ-B4y"/>
         <segue reference="qHp-2h-pF1"/>
     </inferredMetricsTieBreakers>
 </document>

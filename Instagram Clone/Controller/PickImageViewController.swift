@@ -121,7 +121,11 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
             }
             
             print("——————————成功啦——————————————")
-            self.dismiss(animated: true, completion: nil)
+            let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+            self.present(tabBarVC, animated: true, completion: {
+            UserDefaults.standard.setIsLogin(value: true)
+                
+            })
         })
     }
     

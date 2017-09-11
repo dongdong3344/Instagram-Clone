@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         FirebaseApp.configure()
         
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+        let  loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        
+        if UserDefaults.standard.isLogin() {
+            window?.rootViewController = tabBarVC
+        }else{
+            window?.rootViewController = loginVC
+        }
+        
         return true
         
       
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: UIApplicationOpenURLOptionsKey.sourceApplication.rawValue , annotation:UIApplicationOpenURLOptionsKey.annotation.rawValue )
+       
+        return handled;
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

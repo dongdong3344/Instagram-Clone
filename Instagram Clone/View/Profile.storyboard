@@ -54,7 +54,10 @@
                                         <real key="value" value="45"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -155,7 +158,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ringo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-OB-cFO">
-                                <rect key="frame" x="15" y="120" width="90" height="20"/>
+                                <rect key="frame" x="15" y="115" width="90" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="J2o-Mr-N7l"/>
                                 </constraints>
@@ -164,7 +167,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-CS-RNG">
-                                <rect key="frame" x="0.0" y="155" width="375" height="0.5"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="0.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="uOb-Bf-3OE"/>
@@ -174,7 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMe-NP-bqF">
-                                <rect key="frame" x="0.0" y="199.5" width="375" height="0.5"/>
+                                <rect key="frame" x="0.0" y="194.5" width="375" height="0.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="gMk-9a-ey8"/>
@@ -184,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-gx-tBc">
-                                <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="150.5" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-Ic-awS">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="44"/>
@@ -224,10 +227,10 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36Y-Sj-jIJ">
-                                <rect key="frame" x="0.0" y="200" width="375" height="354"/>
+                                <rect key="frame" x="0.0" y="195" width="375" height="359"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qsy-Hb-uSi">
-                                        <rect key="frame" x="0.0" y="59.5" width="375" height="235.5"/>
+                                        <rect key="frame" x="0.0" y="62" width="375" height="235.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hero-favorites" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-2X-y8H">
                                                 <rect key="frame" x="142.5" y="0.0" width="90" height="90"/>
@@ -280,7 +283,7 @@
                             <constraint firstItem="GMe-NP-bqF" firstAttribute="leading" secondItem="YKA-Ro-zak" secondAttribute="leading" id="KoZ-gx-EmH"/>
                             <constraint firstItem="QZd-gx-tBc" firstAttribute="top" secondItem="JVW-CS-RNG" secondAttribute="bottom" id="LtP-Tn-lmV"/>
                             <constraint firstItem="GMe-NP-bqF" firstAttribute="top" secondItem="QZd-gx-tBc" secondAttribute="bottom" id="Rgw-EV-x75"/>
-                            <constraint firstItem="lox-OB-cFO" firstAttribute="top" secondItem="dKf-BZ-C1Q" secondAttribute="bottom" constant="15" id="UoG-Pa-6bQ"/>
+                            <constraint firstItem="lox-OB-cFO" firstAttribute="top" secondItem="dKf-BZ-C1Q" secondAttribute="bottom" constant="10" id="UoG-Pa-6bQ"/>
                             <constraint firstItem="hxI-eJ-z1P" firstAttribute="trailing" secondItem="JVW-CS-RNG" secondAttribute="trailing" id="WCf-xI-nMW"/>
                             <constraint firstItem="wKP-fi-Jpk" firstAttribute="leading" secondItem="dKf-BZ-C1Q" secondAttribute="trailing" constant="15" id="XX3-Es-jS0"/>
                             <constraint firstItem="36Y-Sj-jIJ" firstAttribute="top" secondItem="GMe-NP-bqF" secondAttribute="bottom" id="bOr-Db-r9Q"/>
@@ -299,11 +302,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hxI-eJ-z1P"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wCi-i9-LKc">
-                        <barButtonItem key="leftBarButtonItem" title="ringo_2017" id="sDv-zl-0sM">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="wCi-i9-LKc"/>
                     <connections>
                         <outlet property="displayName" destination="lox-OB-cFO" id="VO7-w6-epw"/>
                         <outlet property="gridButton" destination="Odm-Ic-awS" id="MSE-w4-1La"/>
