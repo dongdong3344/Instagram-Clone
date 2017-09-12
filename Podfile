@@ -3,6 +3,8 @@
 
 target 'Instagram Clone' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+
+
   use_frameworks!
 
   # Pods for Instagram Clone
@@ -13,11 +15,7 @@ pod 'Firebase/Storage'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
-
-
-
-
-
+pod 'Fusuma'
 
 
 end

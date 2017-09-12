@@ -24,7 +24,6 @@
 		6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C631F600E71003E0F47 /* MobileCodes.json */; };
 		6B0D41C11F62174600FC8ED6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41C01F62174600FC8ED6 /* CameraViewController.swift */; };
 		6B0D41C31F62176500FC8ED6 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41C21F62176500FC8ED6 /* MessageViewController.swift */; };
-		6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */; };
 		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
 		6B9543831F64BAC2000EB174 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9543821F64BAC2000EB174 /* Extension.swift */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
@@ -33,7 +32,6 @@
 		6B956B0E1F5C126700FA9525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0D1F5C126700FA9525 /* Assets.xcassets */; };
 		6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B956B0F1F5C126700FA9525 /* LaunchScreen.storyboard */; };
 		6BCE87331F5D1BB100AA50E1 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */; };
-		6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */; };
 		6BCE873B1F5D443A00AA50E1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE873A1F5D443A00AA50E1 /* SignUpViewController.swift */; };
 		6BED32B21F5E6C8200973BF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED32B11F5E6C8200973BF2 /* HomeViewController.swift */; };
 		6BED32B41F5E6C9100973BF2 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED32B31F5E6C9100973BF2 /* PushViewController.swift */; };
@@ -64,7 +62,6 @@
 		6B0D41C21F62176500FC8ED6 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		6B207C621F600E71003E0F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
-		6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Billabong-Bold.otf"; sourceTree = "<group>"; };
 		6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileCodes.storyboard; sourceTree = "<group>"; };
 		6B93335D1F665994008CC94D /* My-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My-Bridging-header.h"; sourceTree = "<group>"; };
 		6B93335F1F665AB7008CC94D /* Instagram Clone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Instagram Clone.entitlements"; sourceTree = "<group>"; };
@@ -76,7 +73,6 @@
 		6B956B0D1F5C126700FA9525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B956B101F5C126700FA9525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BCE87321F5D1BB000AA50E1 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
-		6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cookie-Regular.ttf"; sourceTree = "<group>"; };
 		6BCE873A1F5D443A00AA50E1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6BED32B11F5E6C8200973BF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6BED32B31F5E6C9100973BF2 /* PushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
@@ -208,8 +204,6 @@
 			children = (
 				6B956B061F5C126700FA9525 /* AppDelegate.swift */,
 				6B93335D1F665994008CC94D /* My-Bridging-header.h */,
-				6BCE87341F5D1E0B00AA50E1 /* Cookie-Regular.ttf */,
-				6B207C641F6014BF003E0F47 /* Billabong-Bold.otf */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -300,8 +294,6 @@
 			files = (
 				6B0C1D6E1F635DE200ACD1A4 /* GoogleService-Info.plist in Resources */,
 				6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */,
-				6B207C651F6014F9003E0F47 /* Billabong-Bold.otf in Resources */,
-				6BCE87351F5D1E8700AA50E1 /* Cookie-Regular.ttf in Resources */,
 				6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */,
 				6B021F071F6007B20076B999 /* Activity.storyboard in Resources */,
 				6B956B0E1F5C126700FA9525 /* Assets.xcassets in Resources */,
@@ -362,6 +354,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -373,6 +366,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -556,7 +550,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -574,7 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -2,27 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb1955554941382265</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>1955554941382265</string>
-    <key>FacebookDisplayName</key>
-    <string>Ins2017</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1955554941382265</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1955554941382265</string>
+	<key>FacebookDisplayName</key>
+	<string>Ins2017</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
@@ -45,12 +44,10 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This lets you share photos from your library and save photos to your Camera Roll.</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Pacifico-Regular.ttf</string>
-		<string>Cookie-Regular.ttf</string>
-		<string>Billabong-Bold.otf</string>
-	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This lets you take photos and record video.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>11</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

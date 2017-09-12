@@ -8,9 +8,26 @@
 
 import UIKit
 import Firebase
+import Fusuma
 
 
-class PickImageViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PickImageViewController: UIViewController,FusumaDelegate {
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+        
+    }
+    
+    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
+        
+    }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: URL) {
+        
+    }
+    
+    func fusumaCameraRollUnauthorized() {
+        
+    }
+    
     
     var name:      String?
     var email:     String?
@@ -69,8 +86,8 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
     @objc func selectProfileImage(){
         
         let attributedString = NSAttributedString(string: "添加头像", attributes: [
-            .font : UIFont.systemFont(ofSize: 18),
-            .foregroundColor:UIColor.black])
+            NSFontAttributeName : UIFont.systemFont(ofSize: 18),
+            NSForegroundColorAttributeName:UIColor.black])
       
         let alert:UIAlertController = UIAlertController(title: "", message:nil, preferredStyle: .actionSheet)
          alert.setValue(attributedString, forKey: "attributedTitle")
@@ -78,7 +95,10 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
         let fbAction = UIAlertAction(title: "从Facebook导入", style: .default, handler: nil)
         let twAction = UIAlertAction(title: "从Twitter导入", style: .default, handler: nil)
         let cameraAction  =  UIAlertAction(title: "拍照", style: .default) { (action) in
-            //
+             let picker = FusumaViewController()
+            picker.delegate = self
+           // picker.defaultMode = .library
+             self.present(picker, animated: true, completion: nil)
         }
         
         let albumAction = UIAlertAction(title: "从相册中选择", style: .default) { (action) in
