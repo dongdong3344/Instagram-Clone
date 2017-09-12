@@ -10,8 +10,7 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
-    
-   
+
     @IBOutlet weak var profileImageView: CustomImageView!
     @IBOutlet weak var gridButton: UIButton!
     @IBOutlet weak var displayName: UILabel!

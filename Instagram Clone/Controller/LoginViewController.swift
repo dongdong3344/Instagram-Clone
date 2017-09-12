@@ -39,8 +39,7 @@ class LoginViewController: UIViewController {
     func fbButtonClick(){
         
         let fbLogin = FBSDKLoginManager()
-        @IBAction func addNewProfileImage(_ sender: Any) {
-        }
+       
         fbLogin.logIn(withReadPermissions: ["email", "public_profile", "user_friends"], from: self) { (result, error) in
             if let error = error {
                 self.presentErrorMessage(error.localizedDescription)

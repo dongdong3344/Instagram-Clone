@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class PickImageViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var name:      String?
@@ -23,7 +24,6 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         
         profileImageView.layer.masksToBounds = true
-        
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectProfileImage))
         profileImageView.addGestureRecognizer(tapGesture)
@@ -68,10 +68,38 @@ class PickImageViewController: UIViewController,UIImagePickerControllerDelegate,
     
     @objc func selectProfileImage(){
         
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        present(picker, animated: true, completion: nil)
+        let attributedString = NSAttributedString(string: "添加头像", attributes: [
+            .font : UIFont.systemFont(ofSize: 18),
+            .foregroundColor:UIColor.black])
+      
+        let alert:UIAlertController = UIAlertController(title: "", message:nil, preferredStyle: .actionSheet)
+         alert.setValue(attributedString, forKey: "attributedTitle")
+        
+        let fbAction = UIAlertAction(title: "从Facebook导入", style: .default, handler: nil)
+        let twAction = UIAlertAction(title: "从Twitter导入", style: .default, handler: nil)
+        let cameraAction  =  UIAlertAction(title: "拍照", style: .default) { (action) in
+            //
+        }
+        
+        let albumAction = UIAlertAction(title: "从相册中选择", style: .default) { (action) in
+            //
+        }
+        
+        let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+   
+        alert.addAction(fbAction)
+        alert.addAction(twAction)
+        alert.addAction(cameraAction)
+        alert.addAction(albumAction)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+//        
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//        present(picker, animated: true, completion: nil)
         
     }
     
