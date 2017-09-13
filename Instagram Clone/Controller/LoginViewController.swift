@@ -47,6 +47,10 @@ class LoginViewController: UIViewController {
                 print("Cancelled")
             }else{
                 self.loginSuccess(result: result!)
+                let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+                self.present(tabBarVC, animated: true, completion: {
+                    UserDefaults.standard.setIsLogin(value: true)
+                })
             }
         }
     }

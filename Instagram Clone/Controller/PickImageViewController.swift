@@ -12,23 +12,7 @@ import Fusuma
 
 
 class PickImageViewController: UIViewController,FusumaDelegate {
-    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
-        
-    }
-    
-    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
-        
-    }
-    
-    func fusumaVideoCompleted(withFileURL fileURL: URL) {
-        
-    }
-    
-    func fusumaCameraRollUnauthorized() {
-        
-    }
-    
-    
+   
     var name:      String?
     var email:     String?
     var password:  String?
@@ -59,30 +43,6 @@ class PickImageViewController: UIViewController,FusumaDelegate {
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        var selectedImage: UIImage?
-        
-        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
-            selectedImage = editedImage
-        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            
-            selectedImage = originalImage
-        }
-        
-        if let image = selectedImage {
-            profileImageView.image = image
-        }
-        
-        dismiss(animated: true, completion: nil)
-        
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-       
-        dismiss(animated: true, completion: nil)
-    }
-    
     @objc func selectProfileImage(){
         
         let attributedString = NSAttributedString(string: "添加头像", attributes: [
@@ -95,10 +55,9 @@ class PickImageViewController: UIViewController,FusumaDelegate {
         let fbAction = UIAlertAction(title: "从Facebook导入", style: .default, handler: nil)
         let twAction = UIAlertAction(title: "从Twitter导入", style: .default, handler: nil)
         let cameraAction  =  UIAlertAction(title: "拍照", style: .default) { (action) in
-             let picker = FusumaViewController()
+            let picker = FusumaViewController()
             picker.delegate = self
-           // picker.defaultMode = .library
-             self.present(picker, animated: true, completion: nil)
+            self.present(picker, animated: true, completion: nil)
         }
         
         let albumAction = UIAlertAction(title: "从相册中选择", style: .default) { (action) in
@@ -115,14 +74,28 @@ class PickImageViewController: UIViewController,FusumaDelegate {
         self.present(alert, animated: true, completion: nil)
         
         
-//        
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = true
-//        present(picker, animated: true, completion: nil)
+    }
+    
+    
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+        
+        profileImageView.image = image
         
     }
     
+    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
+        
+    }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: URL) {
+        
+    }
+    
+    func fusumaCameraRollUnauthorized() {
+        
+    }
+    
+
     func handleRegister(){
         guard let name = name,let email = email,let password = password else { return }
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in

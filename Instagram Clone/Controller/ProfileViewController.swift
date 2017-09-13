@@ -8,8 +8,11 @@
 
 import UIKit
 import Firebase
+import Fusuma
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController,FusumaDelegate {
+ 
+    
 
     @IBOutlet weak var profileImageView: CustomImageView!
     @IBOutlet weak var gridButton: UIButton!
@@ -48,16 +51,16 @@ class ProfileViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func addProfileImage(_ sender: Any) {
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+        profileImageView.image = image
         
-         guard let uid = Auth.auth().currentUser?.uid else { return }
-         let imageName = UUID().uuidString
-         let storageRef = Storage.storage().reference().child("ProfileImages").child("\(imageName).jpg")
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let imageName = UUID().uuidString
+        let storageRef = Storage.storage().reference().child("ProfileImages").child("\(imageName).jpg")
         if let profileImage = self.profileImageView.image, let newImage = UIImageJPEGRepresentation(profileImage, 0.1) {
             storageRef.putData(newImage, metadata: nil, completion: { (metadata, error) in
-                if error != nil{
-                    print(error?.localizedDescription)
+                if let error = error{
+                    print(error.localizedDescription)
                     return
                 }
                 
@@ -67,9 +70,9 @@ class ProfileViewController: UIViewController {
                     Database.database().reference().child("Users").child(uid).updateChildValues(newValue, withCompletionBlock: { (error, ref) in
                         if let error = error {
                             print(error.localizedDescription)
-                            return 
+                            return
                         }
-                        print("update new image ")
+                        print("update new image successfully")
                     })
                     
                 }
@@ -77,6 +80,29 @@ class ProfileViewController: UIViewController {
             })
             
         }
+        
+    }
+    
+    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
+        //
+    }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: URL) {
+        //
+    }
+    
+    func fusumaCameraRollUnauthorized() {
+        //
+    }
+    @IBAction func addProfileImage(_ sender: Any) {
+        
+        
+        let picker = FusumaViewController()
+        picker.delegate = self
+        picker.allowMultipleSelection = false
+        present(picker, animated: true, completion: nil)
+        
+        
       
     }
     @IBAction func tabButtonClick(_ sender: UIButton) {
