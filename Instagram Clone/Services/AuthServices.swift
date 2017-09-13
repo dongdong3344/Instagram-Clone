@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Ringo Lin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
@@ -19,7 +19,8 @@ enum AuthError:Error {
 protocol AuthServiceProtocol {
     
     func login(email: String, password: String, completion: @escaping (_ error: AuthError?) -> Void)
-    func register(name: String, email: String, password: String, profileImageData: Data, completion: @escaping (_ error: AuthError?) -> Void)
+    
+    func register(name: String, email: String, password: String, profileImage: UIImage, completion: @escaping (_ error: AuthError?) -> Void)
     
     static func currentUserId() -> String!
     
@@ -27,7 +28,9 @@ protocol AuthServiceProtocol {
 }
 
 struct AuthService:AuthServiceProtocol {
+   
     
+  
     static fileprivate let currentUserIdKey = "currentUserId"
     static fileprivate let isLogInKey = "isLogIn"
     
@@ -41,7 +44,8 @@ struct AuthService:AuthServiceProtocol {
         storage  = Storage.storage()
     }
     
-    func login(email: String, password: String, completion: @escaping (AuthError?) -> Void) {
+    func login (email: String, password: String, completion: @escaping (AuthError?) -> Void) {
+        
         auth?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
                 completion(AuthError.firebaseError(error))
@@ -58,7 +62,7 @@ struct AuthService:AuthServiceProtocol {
         
     }
     
-    func register(name: String, email: String, password: String, profileImageData: Data, completion: @escaping (AuthError?) -> Void) {
+   func register(name: String, email: String, password: String, profileImage:UIImage, completion: @escaping (AuthError?) -> Void) {
         
       
         auth?.signIn(withEmail: email, password: password, completion: { (user, error) in
@@ -72,19 +76,22 @@ struct AuthService:AuthServiceProtocol {
             }
             let imageName  = UUID().uuidString
             let storgeRef  = self.storage.reference().child("Users").child("ProfileImages").child("\(imageName).jpg")
-            storgeRef.putData(profileImageData, metadata: nil, completion: { (metadata, error) in
-                if let error = error{
-                    completion(AuthError.firebaseError(error))
-                    return
-                }
-                if let profileImageURL = metadata?.downloadURL()?.absoluteString{
-                    let values = ["name":name, "email": email, "profileImageURL": profileImageURL]
-                    Router.user(id: user.uid).reference.updateChildValues(values)
-                    self.setDefaultsWithUser(user)
-                    completion(nil)
-                }
-            })
             
+            if let profileImageData = UIImageJPEGRepresentation(profileImage, 0.1) {
+                storgeRef.putData(profileImageData, metadata: nil, completion: { (metadata, error) in
+                    if let error = error{
+                        completion(AuthError.firebaseError(error))
+                        return
+                    }
+                    if let profileImageURL = metadata?.downloadURL()?.absoluteString{
+                        let values = ["name":name, "email": email, "profileImageURL": profileImageURL]
+                        Router.user(id: user.uid).reference.updateChildValues(values)
+                        self.setDefaultsWithUser(user)
+                        completion(nil)
+                    }
+                })
+            }
+       
         })
         
     }

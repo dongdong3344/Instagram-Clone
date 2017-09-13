@@ -97,65 +97,19 @@ class PickImageViewController: UIViewController,FusumaDelegate {
     
 
     func handleRegister(){
-        guard let name = name,let email = email,let password = password else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if error != nil{
-                self.presentErrorMessage(error!.localizedDescription)
+        guard let name = name,let email = email,let password = password,let profileImage = profileImageView.image else {
+            return
+        }
+       
+        AuthService().register(name: name, email: email, password: password, profileImage: profileImage) {[unowned self] (error) in
+            if let error = error {
+                self.displayAlert(title: "Oops", message: error.localizedDescription)
+                return
             }
-            guard let uid = user?.uid else { return }
-            let imageName = UUID().uuidString
-            let storageRef = Storage.storage().reference().child("ProfileImages").child("\(imageName).jpg")
-            if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
-                
-                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-                    if error != nil{
-                       self.presentErrorMessage(error!.localizedDescription)
-                       return
-                    }
-                    if let profileImageURL = metadata?.downloadURL()?.absoluteString{
-                        
-                      //  print(profileImageURL)
-                        
-                        let values = ["name":name, "email": email, "profileImageURL": profileImageURL]
-                        
-                        self.registerUserIntoDatabaseWithUID(uid, values: values as [String : AnyObject])
-                        
-                      
-                    }
-                })
-                
-            }
+            let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
+            self.present(tabBarVC, animated: true, completion: nil)
         }
         
     }
-    
-    func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
-        
-        let databaseRef = Database.database().reference().child("Users").child(uid)
-        
-       databaseRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
-            
-            if error != nil {
-               print("———————————出错啦——————————")
-               self.presentErrorMessage(error!.localizedDescription)
-               return
-            }
-            
-            print("——————————成功啦——————————————")
-            let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
-            self.present(tabBarVC, animated: true, completion: {
-            UserDefaults.standard.setIsLogin(value: true)
-                
-            })
-        })
-    }
-    
-    func presentErrorMessage(_ message:String){
-        
-        let alert = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "我知道了", style: .cancel, handler: nil)
-        alert.addAction(alertAction)
-        present(alert, animated: true, completion: nil)
-    }
-
+  
 }

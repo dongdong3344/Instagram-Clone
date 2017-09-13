@@ -102,20 +102,21 @@ class LoginViewController: UIViewController {
         activityIndicator.startAnimating()
         
         if let email = accountTextField.text, let password = passwordTextField.text{
-            Auth.auth().signIn(withEmail: email, password: password, completion: {[unowned self] (user, error) in
-                if  let error = error{
+            
+            AuthService().login(email: email, password: password, completion: {[unowned self] (error) in
+                if let error = error {
                     self.displayAlert(title: "Oops", message: error.localizedDescription)
                     self.activityIndicator.stopAnimating()
                     self.loginButton.setTitle("登录", for: .normal)
                     return
                 }
-                let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
-                self.present(tabBarVC, animated: true, completion: {
-                    UserDefaults.standard.setIsLogin(value: true)
-                })
+                let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
+                self.present(tabBarVC, animated: true, completion: nil)
+                
             })
+            
         }
-     
+        
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle{

@@ -28,7 +28,7 @@ typealias JSON = [String:Any]
 
 struct MobileCode{
 
-    let name,dialCode,code: String!
+   let name,dialCode,code: String!
 
    init(dictionary: JSON) {
         self.name = dictionary["name"] as! String
@@ -39,6 +39,7 @@ struct MobileCode{
 }
 
 struct MobileCodeFetcher {
+    
   static func getMobileCodes() -> [MobileCode] {
 
         var mobileCodes = [MobileCode]()

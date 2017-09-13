@@ -23,14 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
-        let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
-        let  loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar")
+        let  loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
         
-        if UserDefaults.standard.isLogin() {
-            window?.rootViewController = tabBarVC
-        }else{
-            window?.rootViewController = loginVC
-        }
+        window?.rootViewController = AuthService.isUserLogIn() ? tabBarVC :loginVC
         
         return true
         
