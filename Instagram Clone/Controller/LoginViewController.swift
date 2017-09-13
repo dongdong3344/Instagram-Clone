@@ -11,10 +11,7 @@ import Firebase
 import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
-    
-    @IBAction func addProfileImage(_ sender: Any) {
-    }
-    
+   
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -40,9 +37,9 @@ class LoginViewController: UIViewController {
         
         let fbLogin = FBSDKLoginManager()
        
-        fbLogin.logIn(withReadPermissions: ["email", "public_profile", "user_friends"], from: self) { (result, error) in
+        fbLogin.logIn(withReadPermissions: ["email", "public_profile", "user_friends"], from: self) { [unowned self] (result, error) in
             if let error = error {
-                self.presentErrorMessage(error.localizedDescription)
+                self.displayAlert(title: "Oops", message: error.localizedDescription)
             }else if (result?.isCancelled)!{
                 print("Cancelled")
             }else{
@@ -65,17 +62,17 @@ class LoginViewController: UIViewController {
         let credential =
             FacebookAuthProvider.credential(withAccessToken: accessTokenString)
         
-        Auth.auth().signIn(with: credential) { (user, error) in
+        Auth.auth().signIn(with: credential) { [unowned self](user, error) in
             if let error = error {
-                self.presentErrorMessage(error.localizedDescription)
+               self.displayAlert(title: "Oops", message: error.localizedDescription)
                 return
             }
         }
         
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start(completionHandler: { (connection, result, error) in
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start(completionHandler: {[unowned self] (connection, result, error) in
             
             if let error = error {
-                self.presentErrorMessage(error.localizedDescription)
+                self.displayAlert(title: "Oops", message: error.localizedDescription)
             }
             else{
                 print(result!)
@@ -105,9 +102,9 @@ class LoginViewController: UIViewController {
         activityIndicator.startAnimating()
         
         if let email = accountTextField.text, let password = passwordTextField.text{
-            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                if error != nil{
-                    self.presentErrorMessage((error?.localizedDescription)!)
+            Auth.auth().signIn(withEmail: email, password: password, completion: {[unowned self] (user, error) in
+                if  let error = error{
+                    self.displayAlert(title: "Oops", message: error.localizedDescription)
                     self.activityIndicator.stopAnimating()
                     self.loginButton.setTitle("登录", for: .normal)
                     return
@@ -119,14 +116,6 @@ class LoginViewController: UIViewController {
             })
         }
      
-    }
-    
-    func presentErrorMessage(_ message:String){
-        
-        let alert = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "我知道了", style: .cancel, handler: nil)
-        alert.addAction(alertAction)
-        present(alert, animated: true, completion: nil)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle{

@@ -43,8 +43,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WechatIMG11" translatesAutoresizingMaskIntoConstraints="NO" id="dKf-BZ-C1Q" customClass="CustomImageView" customModule="Instagram_Clone" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dKf-BZ-C1Q" customClass="CustomImageView" customModule="Instagram_Clone" customModuleProvider="target">
                                 <rect key="frame" x="15" y="15" width="90" height="90"/>
+                                <color key="tintColor" red="0.56862745100000001" green="0.7843137255" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="DbM-Mu-KSs"/>
                                     <constraint firstAttribute="height" constant="90" id="rrX-3W-tYz"/>
@@ -54,10 +55,7 @@
                                         <real key="value" value="45"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -160,7 +158,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ringo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-OB-cFO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-OB-cFO">
                                 <rect key="frame" x="15" y="115" width="90" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="J2o-Mr-N7l"/>
@@ -318,7 +316,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="WechatIMG11" width="621" height="614"/>
+        <image name="avatar_placeholder" width="128" height="128"/>
         <image name="empty-story-badge-big" width="20" height="20"/>
         <image name="hero-favorites" width="96" height="96"/>
         <image name="profile-favorites" width="21" height="21"/>

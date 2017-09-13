@@ -12,8 +12,6 @@ import Fusuma
 
 class ProfileViewController: UIViewController,FusumaDelegate {
  
-    
-
     @IBOutlet weak var profileImageView: CustomImageView!
     @IBOutlet weak var gridButton: UIButton!
     @IBOutlet weak var displayName: UILabel!
@@ -25,7 +23,7 @@ class ProfileViewController: UIViewController,FusumaDelegate {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileImageView.tintColor = UIColor(red: 36/255, green: 146/255, blue: 244/255, alpha: 1)
         gridButton.isSelected = true
         gridButton.tintColor = UIColor(red: 36/255, green: 146/255, blue: 244/255, alpha: 1)
         lastSelectedButton = gridButton
@@ -96,14 +94,11 @@ class ProfileViewController: UIViewController,FusumaDelegate {
     }
     @IBAction func addProfileImage(_ sender: Any) {
         
-        
         let picker = FusumaViewController()
         picker.delegate = self
         picker.allowMultipleSelection = false
         present(picker, animated: true, completion: nil)
-        
-        
-      
+   
     }
     @IBAction func tabButtonClick(_ sender: UIButton) {
         
@@ -116,7 +111,6 @@ class ProfileViewController: UIViewController,FusumaDelegate {
     }
     
     func addBarButtonItems(){
-        
         
         let saveHome = UIBarButtonItem.itemWithImage(#imageLiteral(resourceName: "bar-button-savehome"), action:#selector(ProfileViewController.saveHome))
         
