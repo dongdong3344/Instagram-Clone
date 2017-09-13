@@ -17,6 +17,8 @@ import Photos
 
 final class FSCameraView: UIView, UIGestureRecognizerDelegate {
 
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var previewViewContainer: UIView!
     @IBOutlet weak var shotButton: UIButton!
     @IBOutlet weak var flashButton: UIButton!
@@ -42,7 +44,11 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
     
     static func instance() -> FSCameraView {
         
+        
         return UINib(nibName: "FSCameraView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! FSCameraView
+        
+       
+        
     }
     
     func initialize() {
@@ -50,6 +56,9 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
         if session != nil { return }
         
         self.backgroundColor = fusumaBackgroundColor
+        
+        heightConstraint.constant = UIScreen.main.bounds.height - UIScreen.main.bounds.width 
+
         
         let bundle = Bundle(for: self.classForCoder)
         

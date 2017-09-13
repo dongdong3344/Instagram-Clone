@@ -29,7 +29,7 @@
                                             <constraint firstAttribute="height" constant="55" id="xio-9K-drt"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" backgroundImage="logotype-feed"/>
+                                        <state key="normal" backgroundImage="ig_logo"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -293,7 +293,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="dOl-SW-qoN"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" backgroundImage="logotype-feed"/>
+                                                <state key="normal" backgroundImage="ig_logo"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册即可查看好友的照片和视频。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-vn-4f8">
                                                 <rect key="frame" x="0.0" y="60" width="245" height="19.5"/>
@@ -697,7 +697,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名和密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-hP-0Pw">
                                         <rect key="frame" x="104" y="0.0" width="127" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -911,7 +911,7 @@
     <resources>
         <image name="facebook-login-icon" width="22" height="22"/>
         <image name="hero-camera" width="96" height="96"/>
-        <image name="logotype-feed" width="103" height="30"/>
+        <image name="ig_logo" width="182" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qHp-2h-pF1"/>

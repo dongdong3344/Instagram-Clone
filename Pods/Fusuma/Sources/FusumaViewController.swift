@@ -82,8 +82,8 @@ public var fusumaCropImage: Bool  = true
 public var fusumaSavesImage: Bool = false
 
 public var fusumaTitle              = "相机胶卷"
-public var fusumaCameraRollTitle    = "相册"
-public var fusumaCameraTitle        = "拍照"
+public var fusumaCameraRollTitle    = "图库"
+public var fusumaCameraTitle        = "照片"
 public var fusumaVideoTitle         = "视频"
 public var fusumaTitleFont          = UIFont(name: "AvenirNext-DemiBold", size: 18)
 
@@ -181,8 +181,8 @@ public struct ImageMetadata {
         //菜单view背景
         menuView.backgroundColor = fusumaBackgroundColor
         
-        // 菜单view地下增加一条黑线
-        menuView.addBottomBorder(UIColor.black, width: 1.0)
+        // 菜单view地下增加一条线
+        menuView.addBottomBorder(UIColor.lightGray, width: 0.2)
 
         // 默认不准多选
         albumView.allowMultipleSelection = allowMultipleSelection
