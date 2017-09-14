@@ -142,12 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				6B93335F1F665AB7008CC94D /* Instagram Clone.entitlements */,
-				6B0DC54D1F693E7000995E20 /* Services */,
-				6BCE87401F5D4C6700AA50E1 /* Other */,
-				6BCE873F1F5D4C5F00AA50E1 /* Helper */,
 				6BCE873E1F5D4C5900AA50E1 /* Model */,
 				6BCE873D1F5D4C5300AA50E1 /* View */,
 				6BCE873C1F5D4C4500AA50E1 /* Controller */,
+				6B0DC54D1F693E7000995E20 /* Services */,
+				6BCE87401F5D4C6700AA50E1 /* Other */,
+				6BCE873F1F5D4C5F00AA50E1 /* Helper */,
 				6B956B0D1F5C126700FA9525 /* Assets.xcassets */,
 				6B207C631F600E71003E0F47 /* MobileCodes.json */,
 				6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */,
@@ -348,9 +348,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Instagram Clone/Pods-Instagram Clone-resources.sh",
+				"${PODS_ROOT}/Digits/iOS/DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

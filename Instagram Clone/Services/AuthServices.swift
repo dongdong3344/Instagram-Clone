@@ -29,8 +29,6 @@ protocol AuthServiceProtocol {
 
 struct AuthService:AuthServiceProtocol {
    
-    
-  
     static fileprivate let currentUserIdKey = "currentUserId"
     static fileprivate let isLogInKey = "isLogIn"
     
@@ -111,6 +109,7 @@ struct AuthService:AuthServiceProtocol {
         
     UserDefaults.standard.set(user.uid, forKey: AuthService.currentUserIdKey)
     UserDefaults.standard.set(true, forKey: AuthService.isLogInKey)
+    UserDefaults.standard.synchronize()
   
     }
     

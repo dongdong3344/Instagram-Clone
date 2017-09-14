@@ -8,13 +8,14 @@
 
 import UIKit
 
+
 class RegisterViewController: UIViewController {
  
     @IBOutlet weak var lineLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var bgViewLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var codeButton: UIButton!
     @IBOutlet weak var mailButton: UIButton!
-    @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var phoneButton:UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: RoundButton!
     
@@ -24,12 +25,20 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         phoneButton.isSelected = true
+        phoneButton.isUserInteractionEnabled = false
 
         lastSelectedButton = phoneButton
        
     }
 
    
+    @IBAction func codeButtonClick(_ sender: Any) {
+        
+      
+    }
+        
+
+    
     @IBAction func nextButtonClick(_ sender: Any) {
         
         if let email = emailTextField.text{
@@ -40,8 +49,10 @@ class RegisterViewController: UIViewController {
     @IBAction func buttonClick(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
+        sender.isUserInteractionEnabled = !sender.isSelected
         sender.setTitleColor(UIColor.black, for: .normal)
         lastSelectedButton.isSelected = false
+        lastSelectedButton.isUserInteractionEnabled = true
         lastSelectedButton.setTitleColor(UIColor.lightGray, for: .normal)
         lastSelectedButton = sender
         //改变约束

@@ -12,24 +12,10 @@ extension UserDefaults{
     
      // 枚举
     enum UserDefaultsKeys : String {
-            case isLogin  //是否登录
             case name     //用户名
             case email    //邮箱
             case password //密码
         }
-        
-    //设置第一次运行
-    func setIsLogin(value:Bool) {
-        set(value, forKey: UserDefaultsKeys.isLogin.rawValue)//rawValue 字符串值
-        synchronize()
-            
-        }
-        
-    // 获取是否是第一次运行
-    func isLogin() -> Bool {
-            return bool(forKey: UserDefaultsKeys.isLogin.rawValue)
-        }
-    
     
     //保存用户名
     func saveName(value:String) {
