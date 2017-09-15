@@ -28,6 +28,7 @@
 		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
 		6B64C3301F6BB253003CE0D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B64C32F1F6BB224003CE0D4 /* GoogleService-Info.plist */; };
 		6B64C3311F6BB3A8003CE0D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C621F600E71003E0F47 /* Info.plist */; };
+		6B64C3331F6BFC69003CE0D4 /* CodeVertifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B64C3321F6BFC69003CE0D4 /* CodeVertifyViewController.swift */; };
 		6B9543831F64BAC2000EB174 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9543821F64BAC2000EB174 /* Extension.swift */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
 		6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B081F5C126700FA9525 /* LoginViewController.swift */; };
@@ -69,6 +70,7 @@
 		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileCodes.storyboard; sourceTree = "<group>"; };
 		6B64C32F1F6BB224003CE0D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B64C3321F6BFC69003CE0D4 /* CodeVertifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVertifyViewController.swift; sourceTree = "<group>"; };
 		6B93335D1F665994008CC94D /* My-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My-Bridging-header.h"; sourceTree = "<group>"; };
 		6B9543821F64BAC2000EB174 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6B956B031F5C126700FA9525 /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				6B07A55F1F62B99F00D247CE /* ContainerViewController.swift */,
 				6B0D41C01F62174600FC8ED6 /* CameraViewController.swift */,
 				6B0D41C21F62176500FC8ED6 /* MessageViewController.swift */,
+				6B64C3321F6BFC69003CE0D4 /* CodeVertifyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				6B080BFB1F62621B0073372B /* UserDefalutsHelper.swift in Sources */,
 				6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */,
 				6BED32B81F5E6CC500973BF2 /* ProfileViewController.swift in Sources */,
+				6B64C3331F6BFC69003CE0D4 /* CodeVertifyViewController.swift in Sources */,
 				6BED32BC1F5E858E00973BF2 /* RegisterViewController.swift in Sources */,
 				6BED32B41F5E6C9100973BF2 /* PushViewController.swift in Sources */,
 				6BED32B61F5E6C9D00973BF2 /* SearchViewController.swift in Sources */,

@@ -28,24 +28,44 @@ class RegisterViewController: UIViewController {
         phoneButton.isUserInteractionEnabled = false
 
         lastSelectedButton = phoneButton
+        
+        
+       
        
     }
 
+    
+    @IBAction func phoneNextClick(_ sender: Any) {
+
+         performSegue(withIdentifier: "ToCodeVerifyVC", sender: self)
+    }
    
     @IBAction func codeButtonClick(_ sender: Any) {
         
       
     }
-        
+ 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "ToCodeVerifyVC" {
+            
+            let codeVerifyVC = segue.destination as! CodeVertifyViewController
+            codeVerifyVC.testLabel.text = "Ringo Lin"
+           // codeVerifyVC.view.backgroundColor = .blue
+        }
+    }
 
     
     @IBAction func nextButtonClick(_ sender: Any) {
         
         if let email = emailTextField.text{
             UserDefaults.standard.saveEmail(value: email)
-            
         }
     }
+    
+    
+        
     @IBAction func buttonClick(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected

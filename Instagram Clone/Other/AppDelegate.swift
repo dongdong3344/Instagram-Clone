@@ -33,6 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     }
     
+    func application(_ application: UIApplication,didReceiveRemoteNotification notification: [AnyHashable:Any],fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if Auth.auth().canHandleNotification(notification){
+            completionHandler(UIBackgroundFetchResult.noData)
+        }
+        
+        // This notification is not auth related, developer should handle it.
+    }
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
     
         let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: UIApplicationOpenURLOptionsKey.sourceApplication.rawValue , annotation:UIApplicationOpenURLOptionsKey.annotation.rawValue )

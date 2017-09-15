@@ -410,10 +410,10 @@
             </objects>
             <point key="canvasLocation" x="-3503.1999999999998" y="-196.55172413793105"/>
         </scene>
-        <!--View Controller-->
+        <!--Code Vertify View Controller-->
         <scene sceneID="9Ew-ta-hl5">
             <objects>
-                <viewController id="p53-G7-omK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CodeVerityVC" id="p53-G7-omK" customClass="CodeVertifyViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhv-Dg-k6M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,7 +427,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入我们发送到+8615262352648的 6 位验证码。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKh-fx-Q97">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入我们发送到+8615262352648的验证码。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKh-fx-Q97">
                                 <rect key="frame" x="20" y="110" width="335" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Tnw-vL-fqH"/>
@@ -517,10 +517,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7KK-Ox-gk5"/>
                     </view>
+                    <connections>
+                        <outlet property="requstNewCode" destination="26E-Hl-asR" id="zmg-1C-ujd"/>
+                        <outlet property="tagLabel" destination="TKh-fx-Q97" id="UUt-Ws-qEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJG-0Y-0xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4314.3999999999996" y="730.88455772113946"/>
+            <point key="canvasLocation" x="-4452" y="1152"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="EfK-fS-fBt">
@@ -579,8 +583,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="nextButtonClick:" destination="W90-B1-6jv" eventType="touchUpInside" id="bVd-VU-hog"/>
-                                            <segue destination="p53-G7-omK" kind="custom" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="q6Q-N9-ppT"/>
+                                            <action selector="phoneNextClick:" destination="W90-B1-6jv" eventType="touchUpInside" id="G9F-O0-eCK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5t-F0-k0A" customClass="RoundButton" customModule="Instagram_Clone" customModuleProvider="target">
@@ -776,6 +779,7 @@
                         <outlet property="mailButton" destination="2ao-Td-hEX" id="QTs-I5-REI"/>
                         <outlet property="nextButton" destination="r5t-F0-k0A" id="nLU-6m-Iql"/>
                         <outlet property="phoneButton" destination="etI-1q-fXq" id="auB-wh-MWf"/>
+                        <segue destination="p53-G7-omK" kind="custom" identifier="ToCodeVerifyVC" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="rZ9-ko-0Vs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6g-Mm-VgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -796,7 +800,7 @@
                 <viewControllerPlaceholder storyboardName="MobileCodes" id="HSV-Nn-mFB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhk-bA-g6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3503" y="1260"/>
+            <point key="canvasLocation" x="-3460" y="1217"/>
         </scene>
         <!--Password View Controller-->
         <scene sceneID="DHV-iQ-yuj">
