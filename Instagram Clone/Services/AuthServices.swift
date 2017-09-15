@@ -11,16 +11,11 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-enum AuthError:Error {
-    case custom(String)
-    case firebaseError(Error?)
-}
-
 protocol AuthServiceProtocol {
     
-    func login(email: String, password: String, completion: @escaping (_ error: AuthError?) -> Void)
+    func login(email: String, password: String, completion: @escaping (_ error: String?) -> Void)
     
-    func register(name: String, email: String, password: String, profileImage: UIImage, completion: @escaping (_ error: AuthError?) -> Void)
+    func register(name: String, email: String, password: String, profileImage: UIImage, completion: @escaping (_ error: String?) -> Void)
     
     static func currentUserId() -> String!
     
@@ -42,15 +37,15 @@ struct AuthService:AuthServiceProtocol {
         storage  = Storage.storage()
     }
     
-    func login (email: String, password: String, completion: @escaping (AuthError?) -> Void) {
+    func login (email: String, password: String, completion: @escaping (String?) -> Void) {
         
         auth?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error {
-                completion(AuthError.firebaseError(error))
+                completion(error.localizedDescription)
                 return
             }
             guard let user = user else {
-                completion(AuthError.custom("An unexpect error ocurred, please try again."))
+                completion("An unexpect error ocurred, please try again.")
                 return
             }
             self.setDefaultsWithUser(user)
@@ -60,16 +55,17 @@ struct AuthService:AuthServiceProtocol {
         
     }
     
-   func register(name: String, email: String, password: String, profileImage:UIImage, completion: @escaping (AuthError?) -> Void) {
+   func register(name: String, email: String, password: String, profileImage:UIImage, completion: @escaping (String?) -> Void) {
         
       
-        auth?.signIn(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if let error = error{
-                completion(AuthError.firebaseError(error))
+                completion(error.localizedDescription)
+                print(error.localizedDescription)
                 return
             }
             guard let user = user else {
-                completion(AuthError.custom("An unexpect error ocurred, please try again."))
+                completion("An unexpect error ocurred, please try again.")
                 return
             }
             let imageName  = UUID().uuidString
@@ -78,7 +74,8 @@ struct AuthService:AuthServiceProtocol {
             if let profileImageData = UIImageJPEGRepresentation(profileImage, 0.1) {
                 storgeRef.putData(profileImageData, metadata: nil, completion: { (metadata, error) in
                     if let error = error{
-                        completion(AuthError.firebaseError(error))
+                        completion(error.localizedDescription)
+                        print("出错了12")
                         return
                     }
                     if let profileImageURL = metadata?.downloadURL()?.absoluteString{

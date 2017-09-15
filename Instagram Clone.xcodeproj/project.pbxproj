@@ -18,7 +18,6 @@
 		6B074AEF1F5D8B7600521A75 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */; };
 		6B07A5601F62B99F00D247CE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B07A55F1F62B99F00D247CE /* ContainerViewController.swift */; };
 		6B080BFB1F62621B0073372B /* UserDefalutsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B080BFA1F62621B0073372B /* UserDefalutsHelper.swift */; };
-		6B0C1D6E1F635DE200ACD1A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */; };
 		6B0D41B91F61621900FC8ED6 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */; };
 		6B0D41BB1F61629600FC8ED6 /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */; };
 		6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C631F600E71003E0F47 /* MobileCodes.json */; };
@@ -27,6 +26,8 @@
 		6B0DC54F1F693EB300995E20 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0DC54E1F693EB300995E20 /* AuthServices.swift */; };
 		6B16FC061F69612D00C3D408 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16FC051F69612D00C3D408 /* Router.swift */; };
 		6B207C671F602E7D003E0F47 /* MobileCodes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */; };
+		6B64C3301F6BB253003CE0D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B64C32F1F6BB224003CE0D4 /* GoogleService-Info.plist */; };
+		6B64C3311F6BB3A8003CE0D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B207C621F600E71003E0F47 /* Info.plist */; };
 		6B9543831F64BAC2000EB174 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9543821F64BAC2000EB174 /* Extension.swift */; };
 		6B956B071F5C126700FA9525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B061F5C126700FA9525 /* AppDelegate.swift */; };
 		6B956B091F5C126700FA9525 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B956B081F5C126700FA9525 /* LoginViewController.swift */; };
@@ -57,7 +58,7 @@
 		6B074AEE1F5D8B7600521A75 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		6B07A55F1F62B99F00D247CE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		6B080BFA1F62621B0073372B /* UserDefalutsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefalutsHelper.swift; sourceTree = "<group>"; };
-		6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B0BE26F1F6BA3BD00B08415 /* Instagram Clone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Instagram Clone.entitlements"; sourceTree = "<group>"; };
 		6B0D41B81F61621900FC8ED6 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		6B0D41BA1F61629600FC8ED6 /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
 		6B0D41C01F62174600FC8ED6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +68,8 @@
 		6B207C621F600E71003E0F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B207C631F600E71003E0F47 /* MobileCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MobileCodes.json; sourceTree = "<group>"; };
 		6B207C661F602E7D003E0F47 /* MobileCodes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MobileCodes.storyboard; sourceTree = "<group>"; };
+		6B64C32F1F6BB224003CE0D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B93335D1F665994008CC94D /* My-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My-Bridging-header.h"; sourceTree = "<group>"; };
-		6B93335F1F665AB7008CC94D /* Instagram Clone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Instagram Clone.entitlements"; sourceTree = "<group>"; };
 		6B9543821F64BAC2000EB174 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6B956B031F5C126700FA9525 /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B956B061F5C126700FA9525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +142,7 @@
 		6B956B051F5C126700FA9525 /* Instagram Clone */ = {
 			isa = PBXGroup;
 			children = (
-				6B93335F1F665AB7008CC94D /* Instagram Clone.entitlements */,
+				6B0BE26F1F6BA3BD00B08415 /* Instagram Clone.entitlements */,
 				6BCE873E1F5D4C5900AA50E1 /* Model */,
 				6BCE873D1F5D4C5300AA50E1 /* View */,
 				6BCE873C1F5D4C4500AA50E1 /* Controller */,
@@ -150,8 +151,8 @@
 				6BCE873F1F5D4C5F00AA50E1 /* Helper */,
 				6B956B0D1F5C126700FA9525 /* Assets.xcassets */,
 				6B207C631F600E71003E0F47 /* MobileCodes.json */,
-				6B0C1D6D1F635DD100ACD1A4 /* GoogleService-Info.plist */,
 				6B207C621F600E71003E0F47 /* Info.plist */,
+				6B64C32F1F6BB224003CE0D4 /* GoogleService-Info.plist */,
 			);
 			path = "Instagram Clone";
 			sourceTree = "<group>";
@@ -276,6 +277,9 @@
 							com.apple.Push = {
 								enabled = 1;
 							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
 							com.apple.WAC = {
 								enabled = 0;
 							};
@@ -306,7 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0C1D6E1F635DE200ACD1A4 /* GoogleService-Info.plist in Resources */,
+				6B64C3311F6BB3A8003CE0D4 /* Info.plist in Resources */,
+				6B64C3301F6BB253003CE0D4 /* GoogleService-Info.plist in Resources */,
 				6B0D41BD1F61713400FC8ED6 /* MobileCodes.json in Resources */,
 				6B956B111F5C126700FA9525 /* LaunchScreen.storyboard in Resources */,
 				6B021F071F6007B20076B999 /* Activity.storyboard in Resources */,

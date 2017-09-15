@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
             
             AuthService().login(email: email, password: password, completion: {[unowned self] (error) in
                 if let error = error {
-                    self.displayAlert(title: "Oops", message: error.localizedDescription)
+                    self.displayAlert(title: "Oops", message: error)
                     self.activityIndicator.stopAnimating()
                     self.loginButton.setTitle("登录", for: .normal)
                     return

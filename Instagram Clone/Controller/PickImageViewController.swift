@@ -97,13 +97,14 @@ class PickImageViewController: UIViewController,FusumaDelegate {
     
 
     func handleRegister(){
+        
         guard let name = name,let email = email,let password = password,let profileImage = profileImageView.image else {
             return
         }
-       
+      
         AuthService().register(name: name, email: email, password: password, profileImage: profileImage) {[unowned self] (error) in
             if let error = error {
-                self.displayAlert(title: "Oops", message: error.localizedDescription)
+                self.displayAlert(title: "Oops", message: error)
                 return
             }
             let tabBarVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBar")

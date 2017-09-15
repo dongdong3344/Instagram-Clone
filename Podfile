@@ -17,7 +17,4 @@ pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Fusuma'
 
-
-
-
 end

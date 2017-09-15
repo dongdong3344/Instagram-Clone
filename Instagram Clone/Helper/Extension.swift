@@ -12,10 +12,12 @@ extension UILocalizedIndexedCollation{
     
     func partitionObjects(array:[AnyObject], collationStringSelector:Selector) -> ([AnyObject], [String]) {
         var unsortedSections = [[AnyObject]]()
+        
         //1. Create a array to hold the data for each section
         for _ in self.sectionTitles {
             unsortedSections.append([]) //appending an empty array
         }
+        
         //2. Put each objects into a section
         for item in array {
             let index:Int = self.section(for: item, collationStringSelector:collationStringSelector)
@@ -32,6 +34,8 @@ extension UILocalizedIndexedCollation{
         return (sections, sectionTitles)
     }
 }
+
+
 extension UIViewController{
     
     func displayAlert(title:String,message:String){

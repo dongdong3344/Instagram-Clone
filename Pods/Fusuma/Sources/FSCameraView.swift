@@ -105,6 +105,8 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
             }
         }
         
+     
+        
         do {
             
             videoInput = try? AVCaptureDeviceInput(device: device)
