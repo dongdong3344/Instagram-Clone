@@ -563,11 +563,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Instagram Clone/Instagram Clone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M6ZDLRSM4A;
+				DEVELOPMENT_TEAM = 28AWF9TZGF;
 				INFOPLIST_FILE = "Instagram Clone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omni.Instagram2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,11 +581,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Instagram Clone/Instagram Clone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M6ZDLRSM4A;
+				DEVELOPMENT_TEAM = 28AWF9TZGF;
 				INFOPLIST_FILE = "Instagram Clone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.omni.Instagram-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = com.omni.Instagram2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

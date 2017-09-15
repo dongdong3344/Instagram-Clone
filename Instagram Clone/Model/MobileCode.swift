@@ -26,9 +26,9 @@ typealias JSON = [String:Any]
 //    }
 //}
 
-struct MobileCode{
+class MobileCode:NSObject{
 
-   let name,dialCode,code: String!
+   var name,dialCode,code: String!
 
    init(dictionary: JSON) {
         self.name = dictionary["name"] as! String
