@@ -19,12 +19,11 @@ class CodeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         mobileCodes = MobileCodeFetcher.getMobileCodes()
         
-        let (arrayMobileCodes, arrayTitles) = collation.partitionObjects(array: mobileCodes, collationStringSelector: #selector(getter: MobileCode.name))
-        mobileCodesWithSections = arrayMobileCodes as![[MobileCode]]
-        sectionTitles = arrayTitles
+        let (mobileCodesArr, titlesArr) = collation.partitionObjects(array: mobileCodes, collationStringSelector: #selector(getter: MobileCode.name))
+        mobileCodesWithSections = mobileCodesArr as![[MobileCode]]
+        sectionTitles = titlesArr
     }
 
     @IBAction func cancelClick(_ sender: UIBarButtonItem) {
@@ -39,7 +38,8 @@ class CodeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return collation.sectionTitles[section]
+        
+        return sectionTitles[section]
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,26 +84,3 @@ class CodeTableViewController: UITableViewController {
 
 }
 
-extension UILocalizedIndexedCollation{
-    func partitionObjects(array:[AnyObject], collationStringSelector:Selector) -> ([AnyObject], [String]) {
-    var unsortedSections = [[AnyObject]]()
-    //1. Create a array to hold the data for each section
-    for _ in self.sectionTitles {
-        unsortedSections.append([]) //appending an empty array
-    }
-    //2. Put each objects into a section
-    for item in array {
-        let index:Int = self.section(for: item, collationStringSelector:collationStringSelector)
-        unsortedSections[index].append(item)
-    }
-    //3. sorting the array of each sections
-    var sectionTitles = [String]()
-    var sections = [AnyObject]()
-    for index in 0 ..< unsortedSections.count { if unsortedSections[index].count > 0 {
-        sectionTitles.append(self.sectionTitles[index])
-        sections.append(self.sortedArray(from: unsortedSections[index], collationStringSelector: collationStringSelector) as AnyObject)
-        }
-    }
-    return (sections, sectionTitles)
-}
-}
