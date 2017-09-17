@@ -67,7 +67,7 @@ class ProfileViewController: UIViewController,FusumaDelegate {
                     let newValue = ["profileImageURL": newImageURL]
                     Database.database().reference().child("Users").child(uid).updateChildValues(newValue, withCompletionBlock: { (error, ref) in
                         if let error = error {
-                            print(error.localizedDescription)
+                            self.displayAlert(title: "Oops!", message: error.localizedDescription)
                             return
                         }
                         print("update new image successfully")

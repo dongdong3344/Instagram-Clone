@@ -28,10 +28,7 @@ class RegisterViewController: UIViewController {
         phoneButton.isUserInteractionEnabled = false
 
         lastSelectedButton = phoneButton
-        
-        
-       
-       
+
     }
 
     
@@ -49,9 +46,8 @@ class RegisterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if segue.identifier == "ToCodeVerifyVC" {
-            
             let codeVerifyVC = segue.destination as! CodeVertifyViewController
-            codeVerifyVC.testLabel.text = "Ringo Lin"
+           // codeVerifyVC.tagLabel.text = "Ringo Lin"
            // codeVerifyVC.view.backgroundColor = .blue
         }
     }

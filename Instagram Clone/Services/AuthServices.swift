@@ -58,7 +58,7 @@ struct AuthService:AuthServiceProtocol {
    func register(name: String, email: String, password: String, profileImage:UIImage, completion: @escaping (String?) -> Void) {
         
       
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+        auth?.createUser(withEmail: email, password: password, completion: { (user, error) in
             if let error = error{
                 completion(error.localizedDescription)
                 print(error.localizedDescription)

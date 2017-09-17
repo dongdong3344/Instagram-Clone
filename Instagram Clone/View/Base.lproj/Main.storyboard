@@ -439,6 +439,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26E-Hl-asR">
                                 <rect key="frame" x="125" y="159" width="126" height="30"/>
                                 <state key="normal" title="请求新验证码。"/>
+                                <connections>
+                                    <action selector="requestNewCode:" destination="p53-G7-omK" eventType="touchUpInside" id="O4v-oZ-RO2"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-0V-1xw">
                                 <rect key="frame" x="20" y="209" width="335" height="103"/>
@@ -518,8 +521,7 @@
                         <viewLayoutGuide key="safeArea" id="7KK-Ox-gk5"/>
                     </view>
                     <connections>
-                        <outlet property="requstNewCode" destination="26E-Hl-asR" id="zmg-1C-ujd"/>
-                        <outlet property="tagLabel" destination="TKh-fx-Q97" id="UUt-Ws-qEc"/>
+                        <outlet property="tagLabel" destination="TKh-fx-Q97" id="RjF-MG-wzT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJG-0Y-0xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
