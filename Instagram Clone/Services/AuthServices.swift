@@ -75,7 +75,6 @@ struct AuthService:AuthServiceProtocol {
                 storgeRef.putData(profileImageData, metadata: nil, completion: { (metadata, error) in
                     if let error = error{
                         completion(error.localizedDescription)
-                        print("出错了12")
                         return
                     }
                     if let profileImageURL = metadata?.downloadURL()?.absoluteString{

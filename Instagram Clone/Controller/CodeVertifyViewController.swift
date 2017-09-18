@@ -8,15 +8,25 @@
 
 import UIKit
 
+
 class CodeVertifyViewController: UIViewController {
+    
+
     
     @IBOutlet weak var tagLabel: UILabel!
     
     @IBAction func requestNewCode(_ sender: UIButton) {
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
     }
+    
+    
+    @IBAction func nextButtonClick(_ sender: UIButton) {
+        
+     
+        
+    }
+    
 }

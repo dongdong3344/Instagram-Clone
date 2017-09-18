@@ -469,6 +469,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonClick:" destination="p53-G7-omK" eventType="touchUpInside" id="gWR-PL-aXr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -781,6 +784,7 @@
                         <outlet property="mailButton" destination="2ao-Td-hEX" id="QTs-I5-REI"/>
                         <outlet property="nextButton" destination="r5t-F0-k0A" id="nLU-6m-Iql"/>
                         <outlet property="phoneButton" destination="etI-1q-fXq" id="auB-wh-MWf"/>
+                        <outlet property="phoneNumberTextField" destination="a2J-7A-G0M" id="gzH-LD-hUd"/>
                         <segue destination="p53-G7-omK" kind="custom" identifier="ToCodeVerifyVC" customClass="SegueFromLeft" customModule="Instagram_Clone" customModuleProvider="target" id="rZ9-ko-0Vs"/>
                     </connections>
                 </viewController>
@@ -1034,6 +1038,7 @@
         <image name="ig_logo" width="182" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="rZ9-ko-0Vs"/>
         <segue reference="KJN-d1-hDT"/>
         <segue reference="7Rg-RN-wC2"/>
     </inferredMetricsTieBreakers>

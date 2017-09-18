@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 class RegisterViewController: UIViewController {
@@ -18,8 +19,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var phoneButton:UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: RoundButton!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     
     var lastSelectedButton: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +37,20 @@ class RegisterViewController: UIViewController {
     
     @IBAction func phoneNextClick(_ sender: Any) {
 
-         performSegue(withIdentifier: "ToCodeVerifyVC", sender: self)
+       // guard let phoneNumber = phoneNumberTextField.text else { return}
+       
+        print("123")
+        PhoneAuthProvider.provider().verifyPhoneNumber("+8615262352648") { (verificationID, error) in
+            if let error = error{
+                print("Verification code not sent \(error)")
+                self.displayAlert(title: "Oops!", message: error.localizedDescription)
+                return
+            }
+            print(verificationID!)
+        }
+        
+        performSegue(withIdentifier: "ToCodeVerifyVC", sender: self)
+        
     }
    
     @IBAction func codeButtonClick(_ sender: Any) {
@@ -49,6 +65,7 @@ class RegisterViewController: UIViewController {
             let codeVerifyVC = segue.destination as! CodeVertifyViewController
            // codeVerifyVC.tagLabel.text = "Ringo Lin"
            // codeVerifyVC.view.backgroundColor = .blue
+            
         }
     }
 
