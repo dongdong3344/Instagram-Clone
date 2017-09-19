@@ -54,6 +54,16 @@ extension UIColor {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
     
+    //浅蓝色
+    static func babyBlue() -> UIColor{
+       return UIColor(red: 135/255, green: 200/255, blue: 250/200, alpha: 1)
+    }
+    //深蓝色
+    static func deepBlue() -> UIColor{
+        
+      return UIColor(red: 0, green: 143/255, blue: 255/200, alpha: 1)
+    }
+    
 }
 
 extension UIBarButtonItem {

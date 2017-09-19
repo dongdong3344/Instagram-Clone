@@ -109,9 +109,9 @@ class RegisterViewController: UIViewController {
     func textChange(){
         
         if phoneNumberTextField.text!.isEmpty{
-            phoneNextButton.backgroundColor = UIColor(red: 135/255, green: 200/255, blue: 250/200, alpha: 1)
+            phoneNextButton.backgroundColor = UIColor.babyBlue()
         }else{
-            phoneNextButton.backgroundColor = UIColor(red: 0, green: 143/255, blue: 255/200, alpha: 1)
+            phoneNextButton.backgroundColor = UIColor.deepBlue()
         }
         
     }

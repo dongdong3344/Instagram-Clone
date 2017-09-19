@@ -16,20 +16,30 @@ class CodeVertifyViewController: UIViewController {
     
     var timeCount: Int = 60
     var timer: DispatchSourceTimer?
-    
 
-    
     @IBAction func requestNewCode(_ sender: UIButton) {
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let phone = UserDefaults.standard.getPhoneNumber()
-        tagLabel.text = "请输入我们发送到\(phone!)的验证码。"
+        
+        setAttributedTagLabel()
+        
         timerCountDown()
     
     }
-    
+    func setAttributedTagLabel(){
+        
+        guard let phone = UserDefaults.standard.getPhoneNumber() else { return }
+        let attributedStr = NSMutableAttributedString(string: "请输入我们发送到\(phone)的验证码。")
+        
+        let range:NSRange? = NSMakeRange(attributedStr.length - phone.characters.count - 5, phone.characters.count)
+        
+        attributedStr.addAttribute(NSForegroundColorAttributeName,
+                                   value: UIColor.deepBlue(), range: range!)
+        tagLabel.attributedText = attributedStr
+        
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if timer != nil {
@@ -63,7 +73,7 @@ class CodeVertifyViewController: UIViewController {
                 DispatchQueue.main.async {
                     let title = "重新请求验证码。"
                     self.requestNewCodeButton.setTitle(title, for: .normal)
-                    self.requestNewCodeButton.setTitleColor(UIColor.blue, for: .normal)
+                    self.requestNewCodeButton.setTitleColor(UIColor.babyBlue(), for:[])
                     self.requestNewCodeButton.isUserInteractionEnabled = true
                 }
             }else{
@@ -71,7 +81,7 @@ class CodeVertifyViewController: UIViewController {
                 DispatchQueue.main.async {
                     let title = "\(self.timeCount)秒后重新获取验证码。"
                     self.requestNewCodeButton.setTitle(title, for: .normal)
-                    self.requestNewCodeButton.setTitleColor(UIColor(red: 135/255, green: 200/255, blue: 250/200, alpha: 1), for: .normal)
+                    self.requestNewCodeButton.setTitleColor(UIColor.lightGray, for: [])
                     self.requestNewCodeButton.isUserInteractionEnabled = false
                 }
                 

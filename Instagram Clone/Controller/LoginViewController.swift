@@ -90,9 +90,9 @@ class LoginViewController: UIViewController {
     @objc func textChange(){
         
         if (userNameTextField.text!.isEmpty) || (pwdTextField.text!.isEmpty){
-            loginButton.backgroundColor = UIColor(red: 135/255, green: 200/255, blue: 250/200, alpha: 1)
+            loginButton.backgroundColor = UIColor.babyBlue()
         }else{
-            loginButton.backgroundColor = UIColor(red: 0, green: 143/255, blue: 255/200, alpha: 1)
+            loginButton.backgroundColor = UIColor.deepBlue()
         }
     }
     
