@@ -18,12 +18,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var mailButton: UIButton!
     @IBOutlet weak var phoneButton:UIButton!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nextButton: RoundButton!
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    
+    @IBOutlet weak var emailNextButton: UIButton!
+    @IBOutlet weak var phoneNextButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var lastSelectedButton: UIButton!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +31,8 @@ class RegisterViewController: UIViewController {
         phoneButton.isUserInteractionEnabled = false
 
         lastSelectedButton = phoneButton
+        
+        phoneNumberTextField.addTarget(self, action: #selector(textChange), for: .editingChanged)
 
     }
 
@@ -43,11 +45,17 @@ class RegisterViewController: UIViewController {
         
        // print(phoneNumber)
 
+        phoneNextButton.setTitle("", for: .normal)
+        activityIndicator.startAnimating()
+        
         AuthService().getVerificationID(phoneNumber: phoneNumber) { (error) in
            if let error = error{
                 self.displayAlert(title: "Oops!", message: error)
+                self.phoneNextButton.setTitle("下一步", for: .normal)
+                self.activityIndicator.stopAnimating()
                 return
             }
+             UserDefaults.standard.savePhoneNumber(value: phoneNumber)
              self.performSegue(withIdentifier: "ToCodeVerifyVC", sender: self)
         }
    
@@ -58,16 +66,6 @@ class RegisterViewController: UIViewController {
       
     }
  
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == "ToCodeVerifyVC" {
-            let codeVerifyVC = segue.destination as! CodeVertifyViewController
-           // codeVerifyVC.tagLabel.text = "Ringo Lin"
-           // codeVerifyVC.view.backgroundColor = .blue
-            
-        }
-    }
 
     
     @IBAction func nextButtonClick(_ sender: Any) {
@@ -104,6 +102,18 @@ class RegisterViewController: UIViewController {
         if let title = UserDefaults.standard.object(forKey: "CodeButtonTitle") as? String {
             codeButton.setTitle(title, for: .normal)
         }
+    }
+    
+
+    
+    func textChange(){
+        
+        if phoneNumberTextField.text!.isEmpty{
+            phoneNextButton.backgroundColor = UIColor(red: 135/255, green: 200/255, blue: 250/200, alpha: 1)
+        }else{
+            phoneNextButton.backgroundColor = UIColor(red: 0, green: 143/255, blue: 255/200, alpha: 1)
+        }
+        
     }
    
 }
