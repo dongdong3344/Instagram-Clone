@@ -73,13 +73,13 @@ class CodeVertifyViewController: UIViewController {
                 DispatchQueue.main.async {
                     let title = "重新请求验证码。"
                     self.requestNewCodeButton.setTitle(title, for: .normal)
-                    self.requestNewCodeButton.setTitleColor(UIColor.babyBlue(), for:[])
+                    self.requestNewCodeButton.setTitleColor(UIColor.deepBlue(), for:[])
                     self.requestNewCodeButton.isUserInteractionEnabled = true
                 }
             }else{
                 
                 DispatchQueue.main.async {
-                    let title = "\(self.timeCount)秒后重新获取验证码。"
+                                        let title = "\(self.timeCount)秒后重新获取验证码。"
                     self.requestNewCodeButton.setTitle(title, for: .normal)
                     self.requestNewCodeButton.setTitleColor(UIColor.lightGray, for: [])
                     self.requestNewCodeButton.isUserInteractionEnabled = false

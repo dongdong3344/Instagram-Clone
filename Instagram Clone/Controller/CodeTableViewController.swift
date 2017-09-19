@@ -74,7 +74,7 @@ class CodeTableViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let title = mobileCodes[indexPath.row].code + " " + mobileCodes[indexPath.row].dialCode
+        let title = mobileCodesWithSections[indexPath.section][indexPath.row].code + " " + mobileCodesWithSections[indexPath.section][indexPath.row].dialCode
         UserDefaults.standard.set(title, forKey: "CodeButtonTitle")
         UserDefaults.standard.synchronize()
         
