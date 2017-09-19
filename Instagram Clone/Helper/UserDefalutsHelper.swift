@@ -15,6 +15,8 @@ extension UserDefaults{
             case name     //用户名
             case email    //邮箱
             case password //密码
+            case verificationID //验证码
+        
         }
     
     //保存用户名
@@ -58,6 +60,19 @@ extension UserDefaults{
     func getPassword() -> String{
         guard let password  = object(forKey: UserDefaultsKeys.password.rawValue)as? String else{ return "" }
         return password
+    }
+    
+    
+    //保存验证码
+    func saveVerificationID(value:String){
+        set(value, forKey: UserDefaultsKeys.verificationID.rawValue)
+        synchronize()
+        
+    }
+    // 获取验证码
+    func getVerificationID() -> String?{
+        guard let verificationID  = object(forKey: UserDefaultsKeys.verificationID.rawValue)as? String else{ return "" }
+        return verificationID
     }
  
 }

@@ -13,9 +13,17 @@ import FirebaseStorage
 
 protocol AuthServiceProtocol {
     
+    //登录
     func login(email: String, password: String, completion: @escaping (_ error: String?) -> Void)
     
+    //注册
     func register(name: String, email: String, password: String, profileImage: UIImage, completion: @escaping (_ error: String?) -> Void)
+    
+    //获取验证码
+    func getVerificationID(phoneNumber: String,completion: @escaping (_ error: String?) -> Void)
+    
+    //验证
+    func verifyWithCode(_ verificationCode: String?,completion: @escaping (_ error: String?) -> Void)
     
     static func currentUserId() -> String!
     
@@ -88,6 +96,35 @@ struct AuthService:AuthServiceProtocol {
        
         })
         
+    }
+    // 获取验证码
+    func getVerificationID(phoneNumber: String,completion: @escaping (_ error: String?) -> Void) {
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber) { (verificationID, error) in
+            if let error = error {
+               completion(error.localizedDescription)
+               return
+            }
+            UserDefaults.standard.saveVerificationID(value: verificationID!)
+            completion(nil)
+        }
+    }
+    // 验证码验证
+    func verifyWithCode(_ verificationCode: String?,completion: @escaping (_ error: String?) -> Void) {
+        guard let verificationID = UserDefaults.standard.getVerificationID() else { return }
+        if verificationCode != nil {
+            let credential = PhoneAuthProvider.provider().credential(
+                withVerificationID: verificationID,
+                verificationCode: verificationCode!)
+            
+            Auth.auth().signIn(with: credential) { (user, error) in
+                if let error = error {
+                    completion(error.localizedDescription)
+                    return
+                }
+            }
+        } else {
+            completion("No verification code")
+        }
     }
     
     static func currentUserId() -> String! {

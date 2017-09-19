@@ -419,7 +419,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入验证码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRM-cE-CMX">
-                                <rect key="frame" x="124" y="60" width="127" height="40"/>
+                                <rect key="frame" x="123.5" y="60" width="128" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YDd-Dv-CvU"/>
                                 </constraints>
@@ -428,23 +428,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入我们发送到+8615262352648的验证码。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKh-fx-Q97">
-                                <rect key="frame" x="20" y="110" width="335" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Tnw-vL-fqH"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="110" width="335" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26E-Hl-asR">
-                                <rect key="frame" x="125" y="159" width="126" height="30"/>
-                                <state key="normal" title="请求新验证码。"/>
-                                <connections>
-                                    <action selector="requestNewCode:" destination="p53-G7-omK" eventType="touchUpInside" id="O4v-oZ-RO2"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-0V-1xw">
-                                <rect key="frame" x="20" y="209" width="335" height="103"/>
+                                <rect key="frame" x="20" y="197" width="335" height="103"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bks-Qy-koQ">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
@@ -501,9 +491,19 @@
                                     <segue destination="W90-B1-6jv" kind="custom" customClass="SegueFromRight" customModule="Instagram_Clone" customModuleProvider="target" id="KJN-d1-hDT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26E-Hl-asR">
+                                <rect key="frame" x="122.5" y="143" width="129" height="34"/>
+                                <state key="normal" title="请求新验证码。">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="requestNewCode:" destination="p53-G7-omK" eventType="touchUpInside" id="O4v-oZ-RO2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="26E-Hl-asR" firstAttribute="top" secondItem="TKh-fx-Q97" secondAttribute="bottom" constant="15" id="0fL-Y7-R5J"/>
                             <constraint firstItem="7KK-Ox-gk5" firstAttribute="bottom" secondItem="nYC-4C-SMF" secondAttribute="bottom" constant="44" id="37a-ll-RaL"/>
                             <constraint firstItem="TKh-fx-Q97" firstAttribute="leading" secondItem="7KK-Ox-gk5" secondAttribute="leading" constant="20" id="3Ta-dt-Wqz"/>
                             <constraint firstItem="LK9-0V-1xw" firstAttribute="top" secondItem="26E-Hl-asR" secondAttribute="bottom" constant="20" id="AuI-ox-i7u"/>
@@ -513,7 +513,6 @@
                             <constraint firstAttribute="trailing" secondItem="nYC-4C-SMF" secondAttribute="trailing" id="SFR-n3-fbg"/>
                             <constraint firstItem="7KK-Ox-gk5" firstAttribute="bottom" secondItem="Gmd-uP-hb6" secondAttribute="bottom" constant="7" id="UOf-Xp-cIr"/>
                             <constraint firstItem="26E-Hl-asR" firstAttribute="centerX" secondItem="TKh-fx-Q97" secondAttribute="centerX" id="XZL-6K-i6E"/>
-                            <constraint firstItem="26E-Hl-asR" firstAttribute="top" secondItem="uRM-cE-CMX" secondAttribute="bottom" constant="59" id="csk-lI-ZFS"/>
                             <constraint firstItem="TKh-fx-Q97" firstAttribute="top" secondItem="uRM-cE-CMX" secondAttribute="bottom" constant="10" id="frg-VT-QdE"/>
                             <constraint firstItem="uRM-cE-CMX" firstAttribute="top" secondItem="7KK-Ox-gk5" secondAttribute="top" constant="40" id="h76-WL-27B"/>
                             <constraint firstItem="7KK-Ox-gk5" firstAttribute="trailing" secondItem="TKh-fx-Q97" secondAttribute="trailing" constant="20" id="i44-eg-cVS"/>
@@ -524,12 +523,13 @@
                         <viewLayoutGuide key="safeArea" id="7KK-Ox-gk5"/>
                     </view>
                     <connections>
+                        <outlet property="requestNewCodeButton" destination="26E-Hl-asR" id="UUY-Vq-IWm"/>
                         <outlet property="tagLabel" destination="TKh-fx-Q97" id="RjF-MG-wzT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJG-0Y-0xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4452" y="1152"/>
+            <point key="canvasLocation" x="-4343" y="731"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="EfK-fS-fBt">
@@ -1038,7 +1038,6 @@
         <image name="ig_logo" width="182" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rZ9-ko-0Vs"/>
         <segue reference="KJN-d1-hDT"/>
         <segue reference="7Rg-RN-wC2"/>
     </inferredMetricsTieBreakers>

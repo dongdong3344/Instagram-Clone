@@ -36,21 +36,21 @@ class RegisterViewController: UIViewController {
 
     
     @IBAction func phoneNextClick(_ sender: Any) {
+        
+        guard let phone = phoneNumberTextField.text,let countryCode = codeButton.currentTitle?.components(separatedBy: " ").last else { return }
+    
+        let phoneNumber = countryCode + phone
+        
+       // print(phoneNumber)
 
-       // guard let phoneNumber = phoneNumberTextField.text else { return}
-       
-        print("123")
-        PhoneAuthProvider.provider().verifyPhoneNumber("+8615262352648") { (verificationID, error) in
-            if let error = error{
-                print("Verification code not sent \(error)")
-                self.displayAlert(title: "Oops!", message: error.localizedDescription)
+        AuthService().getVerificationID(phoneNumber: phoneNumber) { (error) in
+           if let error = error{
+                self.displayAlert(title: "Oops!", message: error)
                 return
             }
-            print(verificationID!)
+             self.performSegue(withIdentifier: "ToCodeVerifyVC", sender: self)
         }
-        
-        performSegue(withIdentifier: "ToCodeVerifyVC", sender: self)
-        
+   
     }
    
     @IBAction func codeButtonClick(_ sender: Any) {

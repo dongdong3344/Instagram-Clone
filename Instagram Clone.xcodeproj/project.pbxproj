@@ -165,6 +165,7 @@
 				6B956B081F5C126700FA9525 /* LoginViewController.swift */,
 				6BCE873A1F5D443A00AA50E1 /* SignUpViewController.swift */,
 				6BED32BB1F5E858E00973BF2 /* RegisterViewController.swift */,
+				6B64C3321F6BFC69003CE0D4 /* CodeVertifyViewController.swift */,
 				6BED32B11F5E6C8200973BF2 /* HomeViewController.swift */,
 				6BED32B51F5E6C9D00973BF2 /* SearchViewController.swift */,
 				6BED32B31F5E6C9100973BF2 /* PushViewController.swift */,
@@ -176,7 +177,6 @@
 				6B07A55F1F62B99F00D247CE /* ContainerViewController.swift */,
 				6B0D41C01F62174600FC8ED6 /* CameraViewController.swift */,
 				6B0D41C21F62176500FC8ED6 /* MessageViewController.swift */,
-				6B64C3321F6BFC69003CE0D4 /* CodeVertifyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
